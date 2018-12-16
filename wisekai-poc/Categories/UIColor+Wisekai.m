@@ -49,4 +49,30 @@
 + (UIColor *)wiseKaiBlackColor {
     return [UIColor colorWithRed:35.0/255.0 green:20.0/255.0 blue:68.0/255.0 alpha:1.0];
 }
+
+// #251846 - rgb(37,24,70)
++ (UIColor *)wiseKaiDarkPurpleColor {
+    return [UIColor colorWithRed:37.0/255.0 green:24.0/255.0 blue:70.0/255.0 alpha:1.0];
+}
+
+
+// #EE1065 - rgb(238,16,101)
++ (UIColor *)wiseKaiPinkColor {
+    return [UIColor colorWithRed:238.0/255.0 green:16.0/255.0 blue:101.0/255.0 alpha:1.0];
+}
+
+// #F4F1EA - rgb(244,241,234)
++ (UIColor *)wiseKaiCreamColor {
+    return [UIColor colorWithRed:244.0/255.0 green:241.0/255.0 blue:234.0/255.0 alpha:1.0];
+}
+
+// #C9BFBD - rgb(201,191,189)
++ (UIColor *)wiseKaiCreamyGrayColor {
+    return [UIColor colorWithRed:201.0/255.0 green:191.0/255.0 blue:189.0/255.0 alpha:1.0];
+}
+
+// #F48221 - rgb(244,130,33)
++ (UIColor *)wiseKaiOrangeColor {
+    return [UIColor colorWithRed:244.0/255.0 green:130.0/255.0 blue:33.0/255.0 alpha:1.0];
+}
 @end
