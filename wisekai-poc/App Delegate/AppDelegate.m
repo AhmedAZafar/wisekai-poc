@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKCoreKit/FBSDKProfile.h>
+#import "HomeViewController.h"
+#import "UserSelectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +20,37 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        //Take User TO mainVC
+        HomeViewController * homeVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+        
+        UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:homeVC];
+        
+        self.window.rootViewController = navController;
+        
+        
+    } else {
+        //Take them to Login VC
+        UserSelectionViewController * userSVC = [[UserSelectionViewController alloc] initWithNibName:@"UserSelectionViewController" bundle:nil];
+        self.window.rootViewController = userSVC;
+    }
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:app openURL:url options:options];
+    [[FBSDKApplicationDelegate sharedInstance] application:app openURL:url sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey] annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+    
+    return handled;
 }
 
 

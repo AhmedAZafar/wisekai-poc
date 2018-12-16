@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)wiseKaiYellowColor;
 + (UIColor *)wiseKaiDarkGrayColor;
 + (UIColor *)wiseKaiBlackColor;
++ (UIColor *)wiseKaiDarkPurpleColor;
++ (UIColor *)wiseKaiPinkColor;
++ (UIColor *)wiseKaiCreamColor;
++ (UIColor *)wiseKaiCreamyGrayColor;
++ (UIColor *)wiseKaiOrangeColor;
 
 @end
 

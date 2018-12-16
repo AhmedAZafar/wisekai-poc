@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController">
+            <connections>
+                <outlet property="emailTextfield" destination="PyZ-kq-7qw" id="g3S-ae-jnJ"/>
+                <outlet property="loginButton" destination="mlS-Cu-pFd" id="PTS-xz-BTr"/>
+                <outlet property="passwordTextfield" destination="gNs-FZ-bUU" id="2Ve-8X-p7i"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5U-Ms-2cG">
+                    <rect key="frame" x="67" y="132" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-FZ-bUU">
+                    <rect key="frame" x="16" y="360.5" width="343" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="rKq-44-GNf"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlS-Cu-pFd">
+                    <rect key="frame" x="127.5" y="430.5" width="120" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Pm5-Yj-gy2"/>
+                        <constraint firstAttribute="width" constant="120" id="hgV-wQ-vWe"/>
+                    </constraints>
+                    <state key="normal" title="Login"/>
+                    <connections>
+                        <action selector="didPressLoginButton:" destination="-1" eventType="touchUpInside" id="3iD-Se-t4F"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PyZ-kq-7qw">
+                    <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="C8S-Pw-7Ym"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" textContentType="email"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="PyZ-kq-7qw" secondAttribute="trailing" constant="16" id="6R6-jq-fq3"/>
+                <constraint firstItem="PyZ-kq-7qw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IXE-NQ-l0c"/>
+                <constraint firstItem="mlS-Cu-pFd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="J3w-Z3-vj1"/>
+                <constraint firstItem="gNs-FZ-bUU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="S0F-Th-32C"/>
+                <constraint firstItem="mlS-Cu-pFd" firstAttribute="top" secondItem="gNs-FZ-bUU" secondAttribute="bottom" constant="40" id="f1u-Ui-glW"/>
+                <constraint firstItem="gNs-FZ-bUU" firstAttribute="top" secondItem="PyZ-kq-7qw" secondAttribute="bottom" constant="12" id="ipg-FI-Z9z"/>
+                <constraint firstItem="PyZ-kq-7qw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nVO-rb-mnD"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gNs-FZ-bUU" secondAttribute="trailing" constant="16" id="v9z-5c-wNR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="53.600000000000001" y="56.221889055472268"/>
+        </view>
+    </objects>
+</document>
