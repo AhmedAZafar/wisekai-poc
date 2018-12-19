@@ -2,12 +2,14 @@
 //  SignUpViewController.m
 //  wisekai-poc
 //
-//  Created by Ahmed on 12/12/2018.
+//  Created by Ahmed on 19/12/2018.
 //  Copyright © 2018 Ahmed Ali Zafar. All rights reserved.
 //
 
 #import "SignUpViewController.h"
 #import "UIColor+Wisekai.h"
+
+#import <Toast/Toast.h>
 
 @interface SignUpViewController ()
 
@@ -22,12 +24,31 @@
     [self setNavbar];
     [self setLayout];
     [self setupTextfields];
-
+    
 }
 
 #pragma mark - IBActions
 
 - (IBAction)didPressSignUpButton:(id)sender {
+    
+    
+    [CSToastManager setTapToDismissEnabled:YES];
+    [CSToastManager setQueueEnabled:NO];
+    
+    if ((self.emailTextField && self.emailTextField.text.length > 0) && (self.passwordTextField && self.passwordTextField.text.length > 0) && (self.repeatPasswordTextfield && self.repeatPasswordTextfield.text.length > 0) && (self.nameTextField && self.nameTextField.text.length > 0)) {
+        
+        [self.view makeToast:@"Sign Up Successful" duration:2.0 position:CSToastPositionCenter];
+        
+    } else if (self.nameTextField.text.length <= 0){
+        [self.view makeToast:@"Please enter your name" duration:2.0 position:CSToastPositionCenter];
+    } else if (self.emailTextField.text.length <= 0){
+        [self.view makeToast:@"Please enter your email address" duration:2.0 position:CSToastPositionCenter];
+    } else if (self.passwordTextField.text.length <=0) {
+        [self.view makeToast:@"Please enter your password" duration:2.0 position:CSToastPositionCenter];
+    }
+    else {
+        [self.view makeToast:@"Please re-enter your password" duration:2.0 position:CSToastPositionCenter];
+    }
 }
 
 

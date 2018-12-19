@@ -2,17 +2,13 @@
 //  LoginViewController.m
 //  wisekai-poc
 //
-//  Created by Ahmed on 11/12/2018.
+//  Created by Ahmed on 19/12/2018.
 //  Copyright © 2018 Ahmed Ali Zafar. All rights reserved.
 //
 
 #import "LoginViewController.h"
+
 #import "UIColor+Wisekai.h"
-#import "HomeViewController.h"
-#import "SignInViewController.h"
-#import "SignUpViewController.h"
-
-
 
 @interface LoginViewController ()
 
@@ -28,12 +24,10 @@
 #pragma mark  - IBActions
 
 - (IBAction)didSelectSignInButton:(id)sender {
-    SignInViewController * signInVC = [[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil];
-    [self.navigationController pushViewController:signInVC animated:YES];
+    [self performSegueWithIdentifier:@"signin" sender:nil];
 }
 - (IBAction)didSelectSignUpButton:(id)sender {
-    SignUpViewController * signUpVC = [[SignUpViewController alloc] initWithNibName:@"SignUpViewController" bundle:nil];
-    [self.navigationController pushViewController:signUpVC animated:YES];
+    [self performSegueWithIdentifier:@"signup" sender:nil];
 }
 
 #pragma mark  - Helpers
@@ -50,7 +44,7 @@
     
     [self.termsConditionsTextview setBackgroundColor:[UIColor clearColor]];
     [self.termsConditionsTextview setTextColor:[UIColor wiseKaiCreamyGrayColor]];
-
+    
     [self setFacebookLogin];
 }
 
@@ -79,15 +73,9 @@
         NSLog(@"Permissions Declined"); // Navigate to back to Sing IN Screen
     } else {
         //Take User to Home View Controler
+        UIStoryboard * studentStoryBoard = [UIStoryboard storyboardWithName:@"Student" bundle:nil];
         
-        HomeViewController * homeVC = [[HomeViewController alloc] init];
-        
-        UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:homeVC];
-        navController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-        
-        NSLog(@"User Logged in successfully");
-        
-        [self presentViewController:navController animated:YES completion:nil];
+        [self presentViewController:studentStoryBoard.instantiateInitialViewController animated:YES completion:nil];
     }
     
 }

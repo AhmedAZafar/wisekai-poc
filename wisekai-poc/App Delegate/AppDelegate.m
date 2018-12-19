@@ -12,6 +12,9 @@
 #import "HomeViewController.h"
 #import "UserSelectionViewController.h"
 
+#import <UserNotifications/UserNotifications.h>
+
+
 @interface AppDelegate ()
 
 @end
@@ -19,8 +22,8 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
@@ -39,6 +42,9 @@
         UserSelectionViewController * userSVC = [[UserSelectionViewController alloc] initWithNibName:@"UserSelectionViewController" bundle:nil];
         self.window.rootViewController = userSVC;
     }
+    
+    UIStoryboard * studentStoryBoard = [UIStoryboard storyboardWithName:@"Student" bundle:nil];
+    self.window.rootViewController = studentStoryBoard.instantiateInitialViewController;
     
     [self.window makeKeyAndVisible];
     
@@ -79,6 +85,27 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    //UA_LTRACE(@"APNS device token: %@", deviceToken);
+    
+    NSLog(@"deivce Token is: %@", deviceToken);
+    
+    NSString * deviceTokenString = [[[[deviceToken description]
+                                      stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                                     stringByReplacingOccurrencesOfString: @">" withString: @""]
+                                    stringByReplacingOccurrencesOfString: @" " withString: @""];
+    
+    NSLog(@"The generated device token string is : %@",deviceTokenString);
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+    NSLog(@"Error: %@", error.localizedDescription);
+}
+
+
+
 
 
 @end

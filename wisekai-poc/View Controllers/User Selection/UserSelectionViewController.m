@@ -8,7 +8,7 @@
 
 #import "UserSelectionViewController.h"
 #import "UIColor+Wisekai.h"
-#import "LoginViewController.h"
+#import "UIImageView+WiseKai.h"
 
 @interface UserSelectionViewController ()
 
@@ -54,11 +54,19 @@
 
 - (void)segueToNext {
     
-    LoginViewController * loginVC = [[LoginViewController alloc] init];
+    UIStoryboard * loginBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+
+    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:loginBoard.instantiateInitialViewController];
     
-    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    UIImageView * backButtonImageView = [UIImageView getNavBarImageViewForIcon:@"toolbar-like"];
     
-    navController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    UIView * backButtonItemView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
+    
+    [backButtonItemView addSubview:backButtonImageView];
+    
+    UIBarButtonItem * backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButtonItemView];
+    
+    navController.navigationItem.backBarButtonItem = backButtonItem;
     
     [self presentViewController:navController animated:YES completion:nil];
 }

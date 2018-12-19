@@ -2,13 +2,13 @@
 //  SignInViewController.m
 //  wisekai-poc
 //
-//  Created by Ahmed on 13/12/2018.
+//  Created by Ahmed on 19/12/2018.
 //  Copyright © 2018 Ahmed Ali Zafar. All rights reserved.
 //
 
 #import "SignInViewController.h"
 #import "UIColor+Wisekai.h"
-#import "HomeViewController.h"
+#import <Toast/Toast.h>
 
 @interface SignInViewController ()
 
@@ -29,16 +29,17 @@
 
 - (IBAction)didPressLoginButton:(id)sender {
     
-    /*if ((self.emailTextfield.text && self.emailTextfield.text.length > 0) && (self.passwordTextfield.text && self.passwordTextfield.text.length > 0))  {
+    [CSToastManager setTapToDismissEnabled:YES];
+    [CSToastManager setQueueEnabled:NO];
+    if ((self.emailTextfield && self.emailTextfield.text.length > 0) && (self.passwordTextfield && self.passwordTextfield.text.length > 0)) {
         
-        HomeViewController * homeVC = [[HomeViewController alloc] init];
-        
-        homeVC.userEmail = [NSString stringWithString:self.emailTextfield.text];
-        homeVC.userPassword = [NSString stringWithString:self.passwordTextfield.text];
-        
-        [self.navigationController pushViewController:homeVC animated:YES];
-        
-    }*/
+        [self.view makeToast:@"Login Successful" duration:2.0 position:CSToastPositionCenter];
+    }else if (self.emailTextfield.text.length <= 0){
+        [self.view makeToast:@"Please enter your email address" duration:2.0 position:CSToastPositionCenter];
+    } else {
+        [self.view makeToast:@"Please enter your password" duration:2.0 position:CSToastPositionCenter];
+    }
+    
 }
 
 
@@ -85,6 +86,8 @@
     self.emailTextfield.returnKeyType = UIReturnKeyDone;
     self.passwordTextfield.returnKeyType = UIReturnKeyDone;
     
+    [self.passwordTextfield setSecureTextEntry:YES];
+    
     self.emailTextfield.delegate = self;
     self.passwordTextfield.delegate = self;
 }
@@ -107,7 +110,6 @@
     [textField resignFirstResponder];
     return YES;
 }
-
 
 
 @end

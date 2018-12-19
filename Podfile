@@ -5,6 +5,7 @@ target 'wisekai-poc' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
   pod 'FBSDKLoginKit'
+  pod 'Toast', '~> 4.0.0'
   # Pods for wisekai-poc
 
   target 'wisekai-pocTests' do

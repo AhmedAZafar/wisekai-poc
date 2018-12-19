@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "LoginViewController.h"
 #import "UIColor+Wisekai.h"
+#import "StudentMainViewController.h"
 
 #import <FBSDKCoreKit/FBSDKProfile.h>
 #import <FBSDKLoginKit/FBSDKLoginManager.h>
@@ -94,13 +95,17 @@
 
 - (void)didTapProfileView {
     
-    FBSDKLoginManager * fbManager = [[FBSDKLoginManager alloc] init];
+    //FBSDKLoginManager * fbManager = [[FBSDKLoginManager alloc] init];
     
-    [fbManager logOut];
+    //[fbManager logOut];
     
-    LoginViewController * loginVC = [[LoginViewController alloc] init];
+    //LoginViewController * loginVC = [[LoginViewController alloc] init];
     
-    [self presentViewController:loginVC animated:YES completion:nil];
+    //[self presentViewController:loginVC animated:YES completion:nil];
+    
+    StudentMainViewController * studentVC = [[StudentMainViewController alloc] init];
+    
+    [self presentViewController:studentVC animated:YES completion:nil];
 }
 
 
