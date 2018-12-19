@@ -10,6 +10,8 @@
 #import "UIColor+Wisekai.h"
 #import "UIImageView+WiseKai.h"
 
+#import <Toast/Toast.h>
+
 @interface UserSelectionViewController ()
 
 @end
@@ -29,9 +31,14 @@
 #pragma mark - IBActions
 
 - (IBAction)didSelectTeacherButotn:(id)sender {
-    [self segueToNext];
+    [self.view makeToast:@"Feature Under Development" duration:3.0 position:CSToastPositionCenter];
 }
 - (IBAction)didSelectStudentButton:(id)sender {
+    
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [userDefaults setObject:@"student" forKey:@"user-type"];
+    
     [self segueToNext];
 }
 
@@ -58,7 +65,7 @@
 
     UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:loginBoard.instantiateInitialViewController];
     
-    UIImageView * backButtonImageView = [UIImageView getNavBarImageViewForIcon:@"toolbar-like"];
+    UIImageView * backButtonImageView = [UIImageView getNavBarImageViewForIcon:@"back"];
     
     UIView * backButtonItemView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
     

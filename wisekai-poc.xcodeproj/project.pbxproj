@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0BB9AA3EFAA941A7FCA11431 /* Pods_wisekai_poc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD9D9B07F11832CA60E0720 /* Pods_wisekai_poc.framework */; };
+		7C62059921CAA88900A938F2 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62059821CAA88900A938F2 /* UserViewController.m */; };
+		7C62059D21CAB1A800A938F2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62059C21CAB1A800A938F2 /* MapViewController.m */; };
 		7CA984BF21A5B5F50062F088 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA984BE21A5B5F50062F088 /* AppDelegate.m */; };
 		7CA984C721A5B5F70062F088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA984C621A5B5F70062F088 /* Assets.xcassets */; };
 		7CA984CA21A5B5F70062F088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA984C821A5B5F70062F088 /* LaunchScreen.storyboard */; };
@@ -29,8 +31,6 @@
 		E2D3991C21C049D500845B25 /* UserSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3991A21C049D500845B25 /* UserSelectionViewController.m */; };
 		E2D3991D21C049D500845B25 /* UserSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D3991B21C049D500845B25 /* UserSelectionViewController.xib */; };
 		E2D3992C21C18FA500845B25 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3992B21C18FA500845B25 /* User.m */; };
-		E2D3993121C2A07D00845B25 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3992F21C2A07D00845B25 /* HomeViewController.m */; };
-		E2D3993221C2A07D00845B25 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D3993021C2A07D00845B25 /* HomeViewController.xib */; };
 		F9CA746604FCF6A3CE9D9684 /* Pods_wisekai_pocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325573EE2918866AD7D74278 /* Pods_wisekai_pocTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +48,10 @@
 		325573EE2918866AD7D74278 /* Pods_wisekai_pocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wisekai_pocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3882F6026AC601B061429C /* Pods-wisekai-poc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-poc.release.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc.release.xcconfig"; sourceTree = "<group>"; };
 		6C7442C6882BB038D7DC2B2F /* Pods-wisekai-poc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-poc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc.debug.xcconfig"; sourceTree = "<group>"; };
+		7C62059721CAA88900A938F2 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		7C62059821CAA88900A938F2 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		7C62059B21CAB1A800A938F2 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7C62059C21CAB1A800A938F2 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7CA984BA21A5B5F50062F088 /* wisekai-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wisekai-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA984BD21A5B5F50062F088 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7CA984BE21A5B5F50062F088 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,9 +94,6 @@
 		E2D3991B21C049D500845B25 /* UserSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSelectionViewController.xib; sourceTree = "<group>"; };
 		E2D3992A21C18FA500845B25 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E2D3992B21C18FA500845B25 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		E2D3992E21C2A07D00845B25 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		E2D3992F21C2A07D00845B25 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		E2D3993021C2A07D00845B25 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +123,24 @@
 				325573EE2918866AD7D74278 /* Pods_wisekai_pocTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C62059621CAA87600A938F2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7C62059721CAA88900A938F2 /* UserViewController.h */,
+				7C62059821CAA88900A938F2 /* UserViewController.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		7C62059A21CAB19B00A938F2 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7C62059B21CAB1A800A938F2 /* MapViewController.h */,
+				7C62059C21CAB1A800A938F2 /* MapViewController.m */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		7CA984B121A5B5F50062F088 = {
@@ -194,6 +213,8 @@
 		E2AD722021C700BD003AF9E3 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				7C62059A21CAB19B00A938F2 /* Map */,
+				7C62059621CAA87600A938F2 /* User */,
 				E2AD723C21C9D735003AF9E3 /* Login */,
 				E2AD722221C700CB003AF9E3 /* Teacher */,
 				E2AD722121C700C6003AF9E3 /* Student */,
@@ -294,7 +315,6 @@
 		E2D3991121C0498D00845B25 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E2D3992D21C2A06900845B25 /* Home */,
 				E2D3991221C0499B00845B25 /* User Selection */,
 			);
 			path = "View Controllers";
@@ -317,16 +337,6 @@
 				E2D3992B21C18FA500845B25 /* User.m */,
 			);
 			path = "Shared Instances";
-			sourceTree = "<group>";
-		};
-		E2D3992D21C2A06900845B25 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				E2D3992E21C2A07D00845B25 /* HomeViewController.h */,
-				E2D3992F21C2A07D00845B25 /* HomeViewController.m */,
-				E2D3993021C2A07D00845B25 /* HomeViewController.xib */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,7 +433,6 @@
 				E2D3991D21C049D500845B25 /* UserSelectionViewController.xib in Resources */,
 				E2AD723B21C9B380003AF9E3 /* LessonCell.xib in Resources */,
 				E2AD723E21C9D742003AF9E3 /* Login.storyboard in Resources */,
-				E2D3993221C2A07D00845B25 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,14 +519,15 @@
 				E2D3991C21C049D500845B25 /* UserSelectionViewController.m in Sources */,
 				E2AD722E21C70C0D003AF9E3 /* UIImageView+WiseKai.m in Sources */,
 				E2D3992C21C18FA500845B25 /* User.m in Sources */,
+				7C62059921CAA88900A938F2 /* UserViewController.m in Sources */,
 				E2AD722721C700F6003AF9E3 /* StudentMainViewController.m in Sources */,
 				E2AD723121C70D09003AF9E3 /* UIView+Wisekai.m in Sources */,
 				E2AD723A21C9B380003AF9E3 /* LessonCell.m in Sources */,
 				E2AD722B21C70436003AF9E3 /* UIHelper.m in Sources */,
+				7C62059D21CAB1A800A938F2 /* MapViewController.m in Sources */,
 				E2AD724621C9DAF9003AF9E3 /* SignInViewController.m in Sources */,
 				E2AD724921C9DF1F003AF9E3 /* SignUpViewController.m in Sources */,
 				7CA984BF21A5B5F50062F088 /* AppDelegate.m in Sources */,
-				E2D3993121C2A07D00845B25 /* HomeViewController.m in Sources */,
 				E2AD724121C9D75B003AF9E3 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,7 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "wisekai-poc/wisekai-poc.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = CT28XA8756;
 				INFOPLIST_FILE = "wisekai-poc/Info.plist";
@@ -700,7 +710,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wisekai.poc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "WiseKai AdHoc Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "WiseKai Development";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

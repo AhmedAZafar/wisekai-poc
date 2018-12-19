@@ -14,7 +14,9 @@
 #import "Lesson/LessonViewController.h"
 
 #import <UserNotifications/UserNotifications.h>
+#import <FBSDKCoreKit/FBSDKProfile.h>
 #import <FBSDKLoginKit/FBSDKLoginManager.h>
+#import <Toast/Toast.h>
 
 @interface StudentMainViewController ()
 {
@@ -37,9 +39,9 @@
     
     [self setLayout];
     [self setNavBar];
-    [self registerForNotifications];
     [self setupTable];
     [self setToolbar];
+    [self getFacebookInfo];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -51,6 +53,8 @@
     self.view.backgroundColor = [UIColor wiseKaiGreenColor];
     
     self.lessonListTable.backgroundColor = [UIColor clearColor];
+    
+    self.navigationItem.title = @"Lessons";
     
 }
 
@@ -168,80 +172,49 @@
 
 - (void)didSelectMapIcon {
     
+    [self performSegueWithIdentifier:@"showmap" sender:nil];
+    
     NSLog(@"Map Icon Pressed");
 }
 
 - (void)didSelectUserSettingsIcon {
     
+    [self.view makeToast:@"Feature coming soon!" duration:1.5 position:CSToastPositionCenter];
     NSLog(@"User Settings Icon Pressed");
     
 }
 
 - (void)didSelectSearchIcon {
     
+    [self.view makeToast:@"Feature coming soon!" duration:1.5 position:CSToastPositionCenter];
     NSLog(@"Search Icon Pressed");
     
 }
 
 - (void)didSelectLikeIcon {
     
+    [self.view makeToast:@"Feature coming soon!" duration:1.5 position:CSToastPositionCenter];
     NSLog(@"Like Icon Pressed");
     
 }
 
 - (void)didSelectCalendarIcon {
     
+    [self.view makeToast:@"Feature coming soon!" duration:1.5 position:CSToastPositionCenter];
     NSLog(@"Calendar Icon Pressed");
     
 }
 
 - (void)didSelectNotificationIcon {
     
+    [self.view makeToast:@"Feature coming soon!" duration:1.5 position:CSToastPositionCenter];
     NSLog(@"Alert Icon Pressed");
     
 }
 
 - (void)didSelectUserIcon {
     
-    FBSDKLoginManager * fbManager = [[FBSDKLoginManager alloc] init];
-    
-    [fbManager logOut];
-    
-    UIStoryboard * loginBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    
-    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:loginBoard.instantiateInitialViewController];
-    
-    navController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    
-    [self presentViewController:navController animated:YES completion:nil];
-}
-
-
-#pragma mark - Push Notifications
-
-
-- (void)registerForNotifications {
-    
-    UNUserNotificationCenter * center = [UNUserNotificationCenter currentNotificationCenter];
-    
-    if ([[UIApplication sharedApplication] isRegisteredForRemoteNotifications]) {
-        NSLog(@"Application already registered");
-    } else {
-        
-        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            if (granted) {
-                NSLog(@"Permission Given");
-                //[application registerForRemoteNotifications];
-            } else {
-                NSLog(@"Permission Not given");
-            }
-        }];
-        
-        UIApplication * currentApp = [UIApplication sharedApplication];
-        
-        [currentApp registerForRemoteNotifications];
-        
-    }
+    [self performSegueWithIdentifier:@"showuser" sender:nil];
 }
 
 
@@ -318,6 +291,85 @@
         lessonVC.lessonDescription = selectedLessonDescription;
         lessonVC.lessonImageName = selectedLessonImageName;
     }
+}
+
+#pragma mark - Facebook
+
+- (void)getFacebookInfo {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [FBSDKProfile loadCurrentProfileWithCompletion:^(FBSDKProfile *profile, NSError *error) {
+            if (profile) {
+                
+                NSURL * userImageURL = [profile imageURLForPictureMode:FBSDKProfilePictureModeSquare size:CGSizeMake(35, 35)];
+                NSData * userImageData = [NSData dataWithContentsOfURL:userImageURL];
+                
+                NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+                
+                [userDefaults setObject:profile.name forKey:@"user-name"];
+                [userDefaults setObject:userImageData forKey:@"user-image-data"];
+                
+                UIImage * userImage = [UIImage imageWithData:userImageData];
+                
+                UIImageView * userImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
+                
+                userImageView.image = userImage;
+                
+                UIView * leftNavBarItemView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
+                
+                
+                leftNavBarItemView.layer.cornerRadius = leftNavBarItemView.frame.size.width / 2;
+                
+                leftNavBarItemView.clipsToBounds = YES;
+                
+                leftNavBarItemView.userInteractionEnabled = YES;
+                
+                [leftNavBarItemView addSubview:userImageView];
+                
+                UITapGestureRecognizer * logoutTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapLogout)];
+                
+                [leftNavBarItemView addGestureRecognizer:logoutTap];
+                
+                UIBarButtonItem * leftButton = [[UIBarButtonItem alloc] initWithCustomView:leftNavBarItemView];
+                
+                self.navigationItem.leftBarButtonItem = leftButton;
+                
+                
+            }
+        }];
+    });
+}
+
+- (void)didTapLogout {
+    
+    /*
+    
+    FBSDKLoginManager * fbManager = [[FBSDKLoginManager alloc] init];
+    
+    [fbManager logOut];
+    
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    
+    UIStoryboard * loginBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    
+    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:loginBoard.instantiateInitialViewController];
+    
+    UIImageView * backButtonImageView = [UIImageView getNavBarImageViewForIcon:@"back"];
+    
+    UIView * backButtonItemView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
+    
+    [backButtonItemView addSubview:backButtonImageView];
+    
+    UIBarButtonItem * backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButtonItemView];
+    
+    navController.navigationItem.backBarButtonItem = backButtonItem;
+     
+     
+    [self dismissViewControllerAnimated:YES completion:nil];
+     
+     */
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 

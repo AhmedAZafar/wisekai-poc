@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lessonCalendarLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lessonStudentsLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *transparentBackButton;
+@property (weak, nonatomic) IBOutlet UIButton *bookLessonButton;
 
 @end
 

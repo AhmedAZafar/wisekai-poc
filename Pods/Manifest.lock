@@ -16,7 +16,7 @@ DEPENDENCIES:
   - Toast (~> 4.0.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Bolts
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -30,4 +30,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0b167aaf7d572fbc6f0014810c0b69f98f873d0f
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

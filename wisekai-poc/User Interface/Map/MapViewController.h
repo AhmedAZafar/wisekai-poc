@@ -1,8 +1,8 @@
 //
-//  HomeViewController.h
+//  MapViewController.h
 //  wisekai-poc
 //
-//  Created by Ahmed on 13/12/2018.
+//  Created by Ahmed Ali Zafar on 19/12/2018.
 //  Copyright © 2018 Ahmed Ali Zafar. All rights reserved.
 //
 
@@ -11,12 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeViewController : UIViewController <UISearchBarDelegate>
+@interface MapViewController : UIViewController <UISearchBarDelegate>
 
-@property (nonatomic, strong) NSString * userEmail;
-@property (nonatomic, strong) NSString * userPassword;
-
-@property (nonatomic, strong) NSString * userName;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet MKMapView *lessonMapView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;

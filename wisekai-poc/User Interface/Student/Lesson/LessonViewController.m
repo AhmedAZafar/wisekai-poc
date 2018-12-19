@@ -9,6 +9,8 @@
 #import "LessonViewController.h"
 #import "UIColor+Wisekai.h"
 
+#import <Toast/Toast.h>
+
 @interface LessonViewController ()
 
 @end
@@ -20,6 +22,16 @@
     
     [self setLayout];
     [self setNavBar];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self setNavBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self unsetNavBar];
+    self.bookLessonButton.userInteractionEnabled = YES;
+                                                               
 }
 
 #pragma mark - Helpers
@@ -43,8 +55,6 @@
     self.mainBannerImageView.layer.zPosition = 0;
     self.teacherImageView.layer.zPosition = 1;
     self.teacherNameLabel.layer.zPosition = 1;
-    
-    self.navigationController.navigationBar.layer.zPosition = -1;
     
     self.studentsIconImageView.image = [[UIImage imageNamed:@"lesson-students"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.studentsIconImageView.tintColor = [UIColor wiseKaiBlueColor];
@@ -73,17 +83,27 @@
 }
 
 - (void)setNavBar {
-    self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
+    self.navigationController.navigationBar.layer.zPosition = -1;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)unsetNavBar {
+    self.navigationController.navigationBar.layer.zPosition = 1;
 }
-*/
+
+#pragma mark - IBActions
+
+- (IBAction)didSelectBookLessonButton:(id)sender {
+    
+    self.bookLessonButton.userInteractionEnabled = NO;
+    self.bookLessonButton.alpha = 0.0;
+    
+    [UIView animateWithDuration:2.0 animations:^{
+            [self.view makeToast:@"Lesson Booked" duration:2.0 position:CSToastPositionCenter];
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }];
+}
 
 @end

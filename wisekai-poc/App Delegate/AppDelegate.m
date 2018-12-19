@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKCoreKit/FBSDKProfile.h>
-#import "HomeViewController.h"
 #import "UserSelectionViewController.h"
 
 #import <UserNotifications/UserNotifications.h>
@@ -29,13 +28,9 @@
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     
     if ([FBSDKAccessToken currentAccessToken]) {
-        //Take User TO mainVC
-        HomeViewController * homeVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
-        
-        UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:homeVC];
-        
-        self.window.rootViewController = navController;
-        
+        //Take User TO mainVC - Extra Logic in future to select between student and teacher
+        UIStoryboard * studentStoryBoard = [UIStoryboard storyboardWithName:@"Student" bundle:nil];
+        self.window.rootViewController = studentStoryBoard.instantiateInitialViewController;
         
     } else {
         //Take them to Login VC
@@ -43,10 +38,9 @@
         self.window.rootViewController = userSVC;
     }
     
-    UIStoryboard * studentStoryBoard = [UIStoryboard storyboardWithName:@"Student" bundle:nil];
-    self.window.rootViewController = studentStoryBoard.instantiateInitialViewController;
-    
     [self.window makeKeyAndVisible];
+    
+    [self registerForNotifications];
     
     return YES;
 }
@@ -102,6 +96,29 @@
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     
     NSLog(@"Error: %@", error.localizedDescription);
+}
+
+#pragma mark - Push Notifications
+
+
+- (void)registerForNotifications {
+    
+    UNUserNotificationCenter * center = [UNUserNotificationCenter currentNotificationCenter];
+    
+    if ([[UIApplication sharedApplication] isRegisteredForRemoteNotifications]) {
+        NSLog(@"Application already registered");
+    } else {
+        
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+                NSLog(@"Permission Given");
+                [[UIApplication sharedApplication] registerForRemoteNotifications];
+                
+            } else {
+                NSLog(@"Permission Not given");
+            }
+        }];
+    }
 }
 
 
