@@ -70,9 +70,13 @@
     if (result.isCancelled) {
         NSLog(@"User cancelled the login");
     } else if (result.declinedPermissions.count > 0) {
-        NSLog(@"Permissions Declined"); // Navigate to back to Sing IN Screen
+        NSLog(@"Permissions Declined"); // Navigate to back to Sign IN Screen
     } else {
         //Take User to Home View Controler
+        
+        
+        
+        
         UIStoryboard * studentStoryBoard = [UIStoryboard storyboardWithName:@"Student" bundle:nil];
         
         [self presentViewController:studentStoryBoard.instantiateInitialViewController animated:YES completion:nil];

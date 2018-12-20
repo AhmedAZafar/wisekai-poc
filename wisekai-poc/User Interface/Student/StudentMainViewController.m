@@ -41,11 +41,12 @@
     [self setNavBar];
     [self setupTable];
     [self setToolbar];
-    [self getFacebookInfo];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [self.lessonListTable reloadData];
+    [self getFacebookInfo];
 }
 
 - (void)setLayout {
@@ -171,10 +172,7 @@
 #pragma mark - Tap Gesture Callback Selectors
 
 - (void)didSelectMapIcon {
-    
     [self performSegueWithIdentifier:@"showmap" sender:nil];
-    
-    NSLog(@"Map Icon Pressed");
 }
 
 - (void)didSelectUserSettingsIcon {
@@ -342,32 +340,11 @@
 
 - (void)didTapLogout {
     
-    /*
+    NSLog(@"Did Tap Logout");
     
     FBSDKLoginManager * fbManager = [[FBSDKLoginManager alloc] init];
     
     [fbManager logOut];
-    
-    [self.navigationController popToRootViewControllerAnimated:NO];
-    
-    UIStoryboard * loginBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    
-    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:loginBoard.instantiateInitialViewController];
-    
-    UIImageView * backButtonImageView = [UIImageView getNavBarImageViewForIcon:@"back"];
-    
-    UIView * backButtonItemView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
-    
-    [backButtonItemView addSubview:backButtonImageView];
-    
-    UIBarButtonItem * backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButtonItemView];
-    
-    navController.navigationItem.backBarButtonItem = backButtonItem;
-     
-     
-    [self dismissViewControllerAnimated:YES completion:nil];
-     
-     */
     
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }

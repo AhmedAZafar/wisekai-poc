@@ -36,6 +36,11 @@
     
     self.userDescription.userInteractionEnabled = NO;
     [self.userDescription setEditable:NO];
+    self.userDescription.backgroundColor = [UIColor clearColor];
+    
+    self.userName.textColor = [UIColor wiseKaiDarkGrayColor];
+    self.userEmail.textColor = [UIColor wiseKaiDarkGrayColor];
+    self.userRegion.textColor = [UIColor wiseKaiDarkGrayColor];
     
 }
 

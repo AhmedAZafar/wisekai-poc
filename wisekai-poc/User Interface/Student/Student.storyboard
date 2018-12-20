@@ -54,12 +54,20 @@
                         <outlet property="lessonListTable" destination="k9U-Wm-YWt" id="o27-ga-3qE"/>
                         <segue destination="owY-EE-4V1" kind="show" identifier="showlesson" id="aio-q8-3Bw"/>
                         <segue destination="Fu0-Dv-l7m" kind="show" identifier="showuser" id="Yl0-KV-Pls"/>
-                        <segue destination="UxA-jK-QIl" kind="show" identifier="showmap" id="xHK-Im-TYF"/>
+                        <segue destination="nm8-xz-hkC" kind="show" identifier="showmap" id="YmR-kn-6iF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="taL-LA-Ig2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1084" y="114.69265367316342"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="sJO-vV-hBx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" id="nm8-xz-hkC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWc-9n-aEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1243" y="560"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="q73-e4-Azd">
@@ -399,60 +407,6 @@
             </objects>
             <point key="canvasLocation" x="2487" y="115"/>
         </scene>
-        <!--Map View Controller-->
-        <scene sceneID="ZbZ-TO-eQ4">
-            <objects>
-                <viewController id="UxA-jK-QIl" customClass="MapViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6KU-WW-1he">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-pi-p9t">
-                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="FSI-Pc-mhJ"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WHU-rw-TIe">
-                                <rect key="frame" x="0.0" y="104" width="375" height="519"/>
-                            </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfV-fb-te0">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="ZAu-x5-WuJ"/>
-                                </constraints>
-                                <items/>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="QfV-fb-te0" firstAttribute="leading" secondItem="eBn-gb-f21" secondAttribute="leading" id="7u0-Dc-a3n"/>
-                            <constraint firstItem="WHU-rw-TIe" firstAttribute="trailing" secondItem="eBn-gb-f21" secondAttribute="trailing" id="Ia2-IE-wgE"/>
-                            <constraint firstItem="fdn-pi-p9t" firstAttribute="trailing" secondItem="eBn-gb-f21" secondAttribute="trailing" id="NbZ-mm-LAy"/>
-                            <constraint firstItem="WHU-rw-TIe" firstAttribute="leading" secondItem="eBn-gb-f21" secondAttribute="leading" id="Nh8-V7-zwy"/>
-                            <constraint firstItem="WHU-rw-TIe" firstAttribute="centerX" secondItem="6KU-WW-1he" secondAttribute="centerX" id="heX-hH-wzZ"/>
-                            <constraint firstItem="WHU-rw-TIe" firstAttribute="top" secondItem="fdn-pi-p9t" secondAttribute="bottom" id="q9R-Q1-6gW"/>
-                            <constraint firstItem="QfV-fb-te0" firstAttribute="top" secondItem="WHU-rw-TIe" secondAttribute="bottom" id="s3e-7f-9bS"/>
-                            <constraint firstItem="QfV-fb-te0" firstAttribute="top" secondItem="WHU-rw-TIe" secondAttribute="bottom" id="vza-2u-Brl"/>
-                            <constraint firstItem="fdn-pi-p9t" firstAttribute="top" secondItem="eBn-gb-f21" secondAttribute="top" id="xSn-GX-Z1Y"/>
-                            <constraint firstItem="QfV-fb-te0" firstAttribute="bottom" secondItem="eBn-gb-f21" secondAttribute="bottom" id="yw2-1E-oHp"/>
-                            <constraint firstItem="fdn-pi-p9t" firstAttribute="leading" secondItem="eBn-gb-f21" secondAttribute="leading" id="z9X-1Y-hGy"/>
-                            <constraint firstItem="QfV-fb-te0" firstAttribute="trailing" secondItem="eBn-gb-f21" secondAttribute="trailing" id="zXb-uh-OrL"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="eBn-gb-f21"/>
-                    </view>
-                    <connections>
-                        <outlet property="lessonMapView" destination="WHU-rw-TIe" id="Afi-zu-vlF"/>
-                        <outlet property="searchBar" destination="fdn-pi-p9t" id="1uK-kB-Gdh"/>
-                        <outlet property="toolBar" destination="QfV-fb-te0" id="I9W-ep-V8k"/>
-                        <segue destination="Fu0-Dv-l7m" kind="show" identifier="showuser" id="P8v-nf-AgB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="93a-Zk-bus" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1768.8" y="775.86206896551732"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="KfH-kd-jkP">
             <objects>
@@ -478,7 +432,4 @@
         <image name="lesson-time" width="75" height="75"/>
         <image name="toolbar-calendar" width="75" height="75"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="P8v-nf-AgB"/>
-    </inferredMetricsTieBreakers>
 </document>

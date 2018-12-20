@@ -27,6 +27,7 @@
 		E2AD724621C9DAF9003AF9E3 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724521C9DAF9003AF9E3 /* SignInViewController.m */; };
 		E2AD724921C9DF1F003AF9E3 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724821C9DF1F003AF9E3 /* SignUpViewController.m */; };
 		E2AD724D21C9E9E2003AF9E3 /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */; };
+		E2AD725521CAE2B6003AF9E3 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AD725421CAE2B6003AF9E3 /* Map.storyboard */; };
 		E2D398FA21BC57F000845B25 /* UIColor+Wisekai.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D398F921BC57F000845B25 /* UIColor+Wisekai.m */; };
 		E2D3991C21C049D500845B25 /* UserSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3991A21C049D500845B25 /* UserSelectionViewController.m */; };
 		E2D3991D21C049D500845B25 /* UserSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D3991B21C049D500845B25 /* UserSelectionViewController.xib */; };
@@ -87,6 +88,7 @@
 		E2AD724821C9DF1F003AF9E3 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		E2AD724B21C9E9E2003AF9E3 /* LessonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessonViewController.h; sourceTree = "<group>"; };
 		E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LessonViewController.m; sourceTree = "<group>"; };
+		E2AD725421CAE2B6003AF9E3 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		E2D398F821BC57F000845B25 /* UIColor+Wisekai.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Wisekai.h"; sourceTree = "<group>"; };
 		E2D398F921BC57F000845B25 /* UIColor+Wisekai.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Wisekai.m"; sourceTree = "<group>"; };
 		E2D3991921C049D500845B25 /* UserSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSelectionViewController.h; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				7C62059B21CAB1A800A938F2 /* MapViewController.h */,
 				7C62059C21CAB1A800A938F2 /* MapViewController.m */,
+				E2AD725421CAE2B6003AF9E3 /* Map.storyboard */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2AD722421C700E1003AF9E3 /* Student.storyboard in Resources */,
+				E2AD725521CAE2B6003AF9E3 /* Map.storyboard in Resources */,
 				7CA984CA21A5B5F70062F088 /* LaunchScreen.storyboard in Resources */,
 				7CA984C721A5B5F70062F088 /* Assets.xcassets in Resources */,
 				E2D3991D21C049D500845B25 /* UserSelectionViewController.xib in Resources */,
