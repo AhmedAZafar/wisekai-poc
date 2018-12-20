@@ -83,12 +83,19 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     //UA_LTRACE(@"APNS device token: %@", deviceToken);
     
-    NSLog(@"deivce Token is: %@", deviceToken);
-    
     NSString * deviceTokenString = [[[[deviceToken description]
                                       stringByReplacingOccurrencesOfString: @"<" withString: @""]
                                      stringByReplacingOccurrencesOfString: @">" withString: @""]
                                     stringByReplacingOccurrencesOfString: @" " withString: @""];
+    
+    [self uploadPushNotificationDeviceToken:deviceTokenString];
+    
+
+    
+    
+    NSLog(@"deivce Token is: %@", deviceToken);
+    
+
     
     NSLog(@"The generated device token string is : %@",deviceTokenString);
 }
@@ -119,6 +126,35 @@
             }
         }];
     }
+}
+
+
+#pragma mark - API
+
+- (void)uploadPushNotificationDeviceToken:(NSString *)token {
+    
+    NSString * urlString = [NSString stringWithFormat:@"http://wisekai.com:8085/api/v1/setup/addToken/%@", token];
+    
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+    
+    NSURL * url = [NSURL URLWithString:urlString];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+                                                           cachePolicy:NSURLRequestReloadIgnoringCacheData
+                                                       timeoutInterval:5.0];
+    
+    sessionConfiguration.allowsCellularAccess = YES;
+    
+    NSURLSession * urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
+    
+    [[urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+            
+            NSLog(@"Response Received");
+            
+        }
+    }] resume];
+    
 }
 
 
