@@ -8,23 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		0BB9AA3EFAA941A7FCA11431 /* Pods_wisekai_poc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD9D9B07F11832CA60E0720 /* Pods_wisekai_poc.framework */; };
+		7C62059921CAA88900A938F2 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62059821CAA88900A938F2 /* UserViewController.m */; };
+		7C62059D21CAB1A800A938F2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62059C21CAB1A800A938F2 /* MapViewController.m */; };
 		7CA984BF21A5B5F50062F088 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA984BE21A5B5F50062F088 /* AppDelegate.m */; };
 		7CA984C721A5B5F70062F088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA984C621A5B5F70062F088 /* Assets.xcassets */; };
 		7CA984CA21A5B5F70062F088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA984C821A5B5F70062F088 /* LaunchScreen.storyboard */; };
 		7CA984CD21A5B5F70062F088 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA984CC21A5B5F70062F088 /* main.m */; };
 		7CA984D721A5B5F70062F088 /* wisekai_pocTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA984D621A5B5F70062F088 /* wisekai_pocTests.m */; };
+		E2AD722421C700E1003AF9E3 /* Student.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AD722321C700E1003AF9E3 /* Student.storyboard */; };
+		E2AD722721C700F6003AF9E3 /* StudentMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD722621C700F6003AF9E3 /* StudentMainViewController.m */; };
+		E2AD722B21C70436003AF9E3 /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD722A21C70436003AF9E3 /* UIHelper.m */; };
+		E2AD722E21C70C0D003AF9E3 /* UIImageView+WiseKai.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD722D21C70C0D003AF9E3 /* UIImageView+WiseKai.m */; };
+		E2AD723121C70D09003AF9E3 /* UIView+Wisekai.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD723021C70D09003AF9E3 /* UIView+Wisekai.m */; };
+		E2AD723A21C9B380003AF9E3 /* LessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD723821C9B380003AF9E3 /* LessonCell.m */; };
+		E2AD723B21C9B380003AF9E3 /* LessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AD723921C9B380003AF9E3 /* LessonCell.xib */; };
+		E2AD723E21C9D742003AF9E3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AD723D21C9D742003AF9E3 /* Login.storyboard */; };
+		E2AD724121C9D75B003AF9E3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724021C9D75B003AF9E3 /* LoginViewController.m */; };
+		E2AD724621C9DAF9003AF9E3 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724521C9DAF9003AF9E3 /* SignInViewController.m */; };
+		E2AD724921C9DF1F003AF9E3 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724821C9DF1F003AF9E3 /* SignUpViewController.m */; };
+		E2AD724D21C9E9E2003AF9E3 /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */; };
+		E2AD725521CAE2B6003AF9E3 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AD725421CAE2B6003AF9E3 /* Map.storyboard */; };
 		E2D398FA21BC57F000845B25 /* UIColor+Wisekai.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D398F921BC57F000845B25 /* UIColor+Wisekai.m */; };
-		E2D3991721C049BB00845B25 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3991521C049BB00845B25 /* LoginViewController.m */; };
-		E2D3991821C049BB00845B25 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D3991621C049BB00845B25 /* LoginViewController.xib */; };
 		E2D3991C21C049D500845B25 /* UserSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3991A21C049D500845B25 /* UserSelectionViewController.m */; };
 		E2D3991D21C049D500845B25 /* UserSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D3991B21C049D500845B25 /* UserSelectionViewController.xib */; };
-		E2D3992721C18B4700845B25 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3992521C18B4700845B25 /* SignUpViewController.m */; };
-		E2D3992821C18B4700845B25 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D3992621C18B4700845B25 /* SignUpViewController.xib */; };
 		E2D3992C21C18FA500845B25 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3992B21C18FA500845B25 /* User.m */; };
-		E2D3993121C2A07D00845B25 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3992F21C2A07D00845B25 /* HomeViewController.m */; };
-		E2D3993221C2A07D00845B25 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D3993021C2A07D00845B25 /* HomeViewController.xib */; };
-		E2D3993721C2C96300845B25 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3993521C2C96300845B25 /* SignInViewController.m */; };
-		E2D3993821C2C96300845B25 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D3993621C2C96300845B25 /* SignInViewController.xib */; };
 		F9CA746604FCF6A3CE9D9684 /* Pods_wisekai_pocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325573EE2918866AD7D74278 /* Pods_wisekai_pocTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +49,10 @@
 		325573EE2918866AD7D74278 /* Pods_wisekai_pocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wisekai_pocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3882F6026AC601B061429C /* Pods-wisekai-poc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-poc.release.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc.release.xcconfig"; sourceTree = "<group>"; };
 		6C7442C6882BB038D7DC2B2F /* Pods-wisekai-poc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-poc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc.debug.xcconfig"; sourceTree = "<group>"; };
+		7C62059721CAA88900A938F2 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		7C62059821CAA88900A938F2 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		7C62059B21CAB1A800A938F2 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7C62059C21CAB1A800A938F2 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7CA984BA21A5B5F50062F088 /* wisekai-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wisekai-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA984BD21A5B5F50062F088 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7CA984BE21A5B5F50062F088 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,25 +66,36 @@
 		A29678102B861DC9FFD60020 /* Pods-wisekai-pocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-pocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-pocTests/Pods-wisekai-pocTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCABAB79CCD0866594D4B6B1 /* Pods-wisekai-pocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-pocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-pocTests/Pods-wisekai-pocTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDD9D9B07F11832CA60E0720 /* Pods_wisekai_poc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wisekai_poc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2AD722321C700E1003AF9E3 /* Student.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Student.storyboard; sourceTree = "<group>"; };
+		E2AD722521C700F6003AF9E3 /* StudentMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentMainViewController.h; sourceTree = "<group>"; };
+		E2AD722621C700F6003AF9E3 /* StudentMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentMainViewController.m; sourceTree = "<group>"; };
+		E2AD722921C70436003AF9E3 /* UIHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIHelper.h; sourceTree = "<group>"; };
+		E2AD722A21C70436003AF9E3 /* UIHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIHelper.m; sourceTree = "<group>"; };
+		E2AD722C21C70C0D003AF9E3 /* UIImageView+WiseKai.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WiseKai.h"; sourceTree = "<group>"; };
+		E2AD722D21C70C0D003AF9E3 /* UIImageView+WiseKai.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WiseKai.m"; sourceTree = "<group>"; };
+		E2AD722F21C70D09003AF9E3 /* UIView+Wisekai.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Wisekai.h"; sourceTree = "<group>"; };
+		E2AD723021C70D09003AF9E3 /* UIView+Wisekai.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Wisekai.m"; sourceTree = "<group>"; };
+		E2AD723221C997ED003AF9E3 /* wisekai-poc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "wisekai-poc.entitlements"; sourceTree = "<group>"; };
+		E2AD723721C9B380003AF9E3 /* LessonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessonCell.h; sourceTree = "<group>"; };
+		E2AD723821C9B380003AF9E3 /* LessonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LessonCell.m; sourceTree = "<group>"; };
+		E2AD723921C9B380003AF9E3 /* LessonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonCell.xib; sourceTree = "<group>"; };
+		E2AD723D21C9D742003AF9E3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		E2AD723F21C9D75B003AF9E3 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E2AD724021C9D75B003AF9E3 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E2AD724421C9DAF9003AF9E3 /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		E2AD724521C9DAF9003AF9E3 /* SignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		E2AD724721C9DF1F003AF9E3 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		E2AD724821C9DF1F003AF9E3 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		E2AD724B21C9E9E2003AF9E3 /* LessonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessonViewController.h; sourceTree = "<group>"; };
+		E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LessonViewController.m; sourceTree = "<group>"; };
+		E2AD725421CAE2B6003AF9E3 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		E2D398F821BC57F000845B25 /* UIColor+Wisekai.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Wisekai.h"; sourceTree = "<group>"; };
 		E2D398F921BC57F000845B25 /* UIColor+Wisekai.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Wisekai.m"; sourceTree = "<group>"; };
-		E2D3991421C049BB00845B25 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		E2D3991521C049BB00845B25 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		E2D3991621C049BB00845B25 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E2D3991921C049D500845B25 /* UserSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSelectionViewController.h; sourceTree = "<group>"; };
 		E2D3991A21C049D500845B25 /* UserSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserSelectionViewController.m; sourceTree = "<group>"; };
 		E2D3991B21C049D500845B25 /* UserSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSelectionViewController.xib; sourceTree = "<group>"; };
-		E2D3992421C18B4700845B25 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
-		E2D3992521C18B4700845B25 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		E2D3992621C18B4700845B25 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		E2D3992A21C18FA500845B25 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E2D3992B21C18FA500845B25 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		E2D3992E21C2A07D00845B25 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		E2D3992F21C2A07D00845B25 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		E2D3993021C2A07D00845B25 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		E2D3993421C2C96300845B25 /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
-		E2D3993521C2C96300845B25 /* SignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		E2D3993621C2C96300845B25 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +127,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7C62059621CAA87600A938F2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7C62059721CAA88900A938F2 /* UserViewController.h */,
+				7C62059821CAA88900A938F2 /* UserViewController.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		7C62059A21CAB19B00A938F2 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7C62059B21CAB1A800A938F2 /* MapViewController.h */,
+				7C62059C21CAB1A800A938F2 /* MapViewController.m */,
+				E2AD725421CAE2B6003AF9E3 /* Map.storyboard */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		7CA984B121A5B5F50062F088 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +169,9 @@
 		7CA984BC21A5B5F50062F088 /* wisekai-poc */ = {
 			isa = PBXGroup;
 			children = (
+				E2AD723221C997ED003AF9E3 /* wisekai-poc.entitlements */,
+				E2AD722821C70424003AF9E3 /* Helpers */,
+				E2AD722021C700BD003AF9E3 /* User Interface */,
 				E2D3992921C18F7900845B25 /* Shared Instances */,
 				E2D3991121C0498D00845B25 /* View Controllers */,
 				E2D398F721BC57D100845B25 /* Categories */,
@@ -169,11 +213,104 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E2AD722021C700BD003AF9E3 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				7C62059A21CAB19B00A938F2 /* Map */,
+				7C62059621CAA87600A938F2 /* User */,
+				E2AD723C21C9D735003AF9E3 /* Login */,
+				E2AD722221C700CB003AF9E3 /* Teacher */,
+				E2AD722121C700C6003AF9E3 /* Student */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		E2AD722121C700C6003AF9E3 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				E2AD724A21C9E9D0003AF9E3 /* Lesson */,
+				E2AD723321C9B1E5003AF9E3 /* Lesson List */,
+				E2AD722321C700E1003AF9E3 /* Student.storyboard */,
+				E2AD722521C700F6003AF9E3 /* StudentMainViewController.h */,
+				E2AD722621C700F6003AF9E3 /* StudentMainViewController.m */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		E2AD722221C700CB003AF9E3 /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Teacher;
+			sourceTree = "<group>";
+		};
+		E2AD722821C70424003AF9E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E2AD722921C70436003AF9E3 /* UIHelper.h */,
+				E2AD722A21C70436003AF9E3 /* UIHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E2AD723321C9B1E5003AF9E3 /* Lesson List */ = {
+			isa = PBXGroup;
+			children = (
+				E2AD723721C9B380003AF9E3 /* LessonCell.h */,
+				E2AD723821C9B380003AF9E3 /* LessonCell.m */,
+				E2AD723921C9B380003AF9E3 /* LessonCell.xib */,
+			);
+			path = "Lesson List";
+			sourceTree = "<group>";
+		};
+		E2AD723C21C9D735003AF9E3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E2AD724321C9DAC2003AF9E3 /* Sign Up */,
+				E2AD724221C9DAB6003AF9E3 /* Sign In */,
+				E2AD723D21C9D742003AF9E3 /* Login.storyboard */,
+				E2AD723F21C9D75B003AF9E3 /* LoginViewController.h */,
+				E2AD724021C9D75B003AF9E3 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E2AD724221C9DAB6003AF9E3 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				E2AD724421C9DAF9003AF9E3 /* SignInViewController.h */,
+				E2AD724521C9DAF9003AF9E3 /* SignInViewController.m */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		E2AD724321C9DAC2003AF9E3 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				E2AD724721C9DF1F003AF9E3 /* SignUpViewController.h */,
+				E2AD724821C9DF1F003AF9E3 /* SignUpViewController.m */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		E2AD724A21C9E9D0003AF9E3 /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				E2AD724B21C9E9E2003AF9E3 /* LessonViewController.h */,
+				E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */,
+			);
+			path = Lesson;
+			sourceTree = "<group>";
+		};
 		E2D398F721BC57D100845B25 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				E2D398F821BC57F000845B25 /* UIColor+Wisekai.h */,
 				E2D398F921BC57F000845B25 /* UIColor+Wisekai.m */,
+				E2AD722C21C70C0D003AF9E3 /* UIImageView+WiseKai.h */,
+				E2AD722D21C70C0D003AF9E3 /* UIImageView+WiseKai.m */,
+				E2AD722F21C70D09003AF9E3 /* UIView+Wisekai.h */,
+				E2AD723021C70D09003AF9E3 /* UIView+Wisekai.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -181,35 +318,19 @@
 		E2D3991121C0498D00845B25 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E2D3993321C2C95100845B25 /* SignIn */,
-				E2D3992D21C2A06900845B25 /* Home */,
-				E2D3992321C18B3200845B25 /* SignUp */,
-				E2D3991221C0499B00845B25 /* Login */,
+				E2D3991221C0499B00845B25 /* User Selection */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		E2D3991221C0499B00845B25 /* Login */ = {
+		E2D3991221C0499B00845B25 /* User Selection */ = {
 			isa = PBXGroup;
 			children = (
-				E2D3991421C049BB00845B25 /* LoginViewController.h */,
-				E2D3991521C049BB00845B25 /* LoginViewController.m */,
-				E2D3991621C049BB00845B25 /* LoginViewController.xib */,
 				E2D3991921C049D500845B25 /* UserSelectionViewController.h */,
 				E2D3991A21C049D500845B25 /* UserSelectionViewController.m */,
 				E2D3991B21C049D500845B25 /* UserSelectionViewController.xib */,
 			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		E2D3992321C18B3200845B25 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				E2D3992421C18B4700845B25 /* SignUpViewController.h */,
-				E2D3992521C18B4700845B25 /* SignUpViewController.m */,
-				E2D3992621C18B4700845B25 /* SignUpViewController.xib */,
-			);
-			path = SignUp;
+			path = "User Selection";
 			sourceTree = "<group>";
 		};
 		E2D3992921C18F7900845B25 /* Shared Instances */ = {
@@ -219,26 +340,6 @@
 				E2D3992B21C18FA500845B25 /* User.m */,
 			);
 			path = "Shared Instances";
-			sourceTree = "<group>";
-		};
-		E2D3992D21C2A06900845B25 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				E2D3992E21C2A07D00845B25 /* HomeViewController.h */,
-				E2D3992F21C2A07D00845B25 /* HomeViewController.m */,
-				E2D3993021C2A07D00845B25 /* HomeViewController.xib */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		E2D3993321C2C95100845B25 /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				E2D3993421C2C96300845B25 /* SignInViewController.h */,
-				E2D3993521C2C96300845B25 /* SignInViewController.m */,
-				E2D3993621C2C96300845B25 /* SignInViewController.xib */,
-			);
-			path = SignIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +394,11 @@
 				TargetAttributes = {
 					7CA984B921A5B5F50062F088 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					7CA984D121A5B5F70062F088 = {
 						CreatedOnToolsVersion = 10.1;
@@ -324,13 +430,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2AD722421C700E1003AF9E3 /* Student.storyboard in Resources */,
+				E2AD725521CAE2B6003AF9E3 /* Map.storyboard in Resources */,
 				7CA984CA21A5B5F70062F088 /* LaunchScreen.storyboard in Resources */,
 				7CA984C721A5B5F70062F088 /* Assets.xcassets in Resources */,
-				E2D3992821C18B4700845B25 /* SignUpViewController.xib in Resources */,
 				E2D3991D21C049D500845B25 /* UserSelectionViewController.xib in Resources */,
-				E2D3993821C2C96300845B25 /* SignInViewController.xib in Resources */,
-				E2D3991821C049BB00845B25 /* LoginViewController.xib in Resources */,
-				E2D3993221C2A07D00845B25 /* HomeViewController.xib in Resources */,
+				E2AD723B21C9B380003AF9E3 /* LessonCell.xib in Resources */,
+				E2AD723E21C9D742003AF9E3 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,12 +496,14 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,15 +517,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2D3991721C049BB00845B25 /* LoginViewController.m in Sources */,
 				E2D398FA21BC57F000845B25 /* UIColor+Wisekai.m in Sources */,
+				E2AD724D21C9E9E2003AF9E3 /* LessonViewController.m in Sources */,
 				7CA984CD21A5B5F70062F088 /* main.m in Sources */,
 				E2D3991C21C049D500845B25 /* UserSelectionViewController.m in Sources */,
+				E2AD722E21C70C0D003AF9E3 /* UIImageView+WiseKai.m in Sources */,
 				E2D3992C21C18FA500845B25 /* User.m in Sources */,
-				E2D3992721C18B4700845B25 /* SignUpViewController.m in Sources */,
+				7C62059921CAA88900A938F2 /* UserViewController.m in Sources */,
+				E2AD722721C700F6003AF9E3 /* StudentMainViewController.m in Sources */,
+				E2AD723121C70D09003AF9E3 /* UIView+Wisekai.m in Sources */,
+				E2AD723A21C9B380003AF9E3 /* LessonCell.m in Sources */,
+				E2AD722B21C70436003AF9E3 /* UIHelper.m in Sources */,
+				7C62059D21CAB1A800A938F2 /* MapViewController.m in Sources */,
+				E2AD724621C9DAF9003AF9E3 /* SignInViewController.m in Sources */,
+				E2AD724921C9DF1F003AF9E3 /* SignUpViewController.m in Sources */,
 				7CA984BF21A5B5F50062F088 /* AppDelegate.m in Sources */,
-				E2D3993721C2C96300845B25 /* SignInViewController.m in Sources */,
-				E2D3993121C2A07D00845B25 /* HomeViewController.m in Sources */,
+				E2AD724121C9D75B003AF9E3 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +683,7 @@
 			baseConfigurationReference = 6C7442C6882BB038D7DC2B2F /* Pods-wisekai-poc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "wisekai-poc/wisekai-poc.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = CT28XA8756;
 				INFOPLIST_FILE = "wisekai-poc/Info.plist";
@@ -587,7 +703,8 @@
 			baseConfigurationReference = 4D3882F6026AC601B061429C /* Pods-wisekai-poc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = "wisekai-poc/wisekai-poc.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = CT28XA8756;
 				INFOPLIST_FILE = "wisekai-poc/Info.plist";
@@ -597,7 +714,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wisekai.poc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "WiseKai AdHoc Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "WiseKai Development";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

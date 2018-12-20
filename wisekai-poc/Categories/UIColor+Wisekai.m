@@ -75,4 +75,9 @@
 + (UIColor *)wiseKaiOrangeColor {
     return [UIColor colorWithRed:244.0/255.0 green:130.0/255.0 blue:33.0/255.0 alpha:1.0];
 }
+
+// #00C0EF - rgb(0,192,239)
++ (UIColor *)wiseKaiLightBlueColor {
+    return [UIColor colorWithRed:0.0 green:192.0/255.0 blue:239.0/255.0 alpha:1.0];
+}
 @end

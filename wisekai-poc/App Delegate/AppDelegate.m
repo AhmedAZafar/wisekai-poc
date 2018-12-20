@@ -9,8 +9,10 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKCoreKit/FBSDKProfile.h>
-#import "HomeViewController.h"
 #import "UserSelectionViewController.h"
+
+#import <UserNotifications/UserNotifications.h>
+
 
 @interface AppDelegate ()
 
@@ -19,20 +21,16 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     
     if ([FBSDKAccessToken currentAccessToken]) {
-        //Take User TO mainVC
-        HomeViewController * homeVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
-        
-        UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:homeVC];
-        
-        self.window.rootViewController = navController;
-        
+        //Take User TO mainVC - Extra Logic in future to select between student and teacher
+        UIStoryboard * studentStoryBoard = [UIStoryboard storyboardWithName:@"Student" bundle:nil];
+        self.window.rootViewController = studentStoryBoard.instantiateInitialViewController;
         
     } else {
         //Take them to Login VC
@@ -41,6 +39,8 @@
     }
     
     [self.window makeKeyAndVisible];
+    
+    [self registerForNotifications];
     
     return YES;
 }
@@ -79,6 +79,86 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    //UA_LTRACE(@"APNS device token: %@", deviceToken);
+    
+    NSString * deviceTokenString = [[[[deviceToken description]
+                                      stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                                     stringByReplacingOccurrencesOfString: @">" withString: @""]
+                                    stringByReplacingOccurrencesOfString: @" " withString: @""];
+    
+    [self uploadPushNotificationDeviceToken:deviceTokenString];
+    
+
+    
+    
+    NSLog(@"deivce Token is: %@", deviceToken);
+    
+
+    
+    NSLog(@"The generated device token string is : %@",deviceTokenString);
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+    NSLog(@"Error: %@", error.localizedDescription);
+}
+
+#pragma mark - Push Notifications
+
+
+- (void)registerForNotifications {
+    
+    UNUserNotificationCenter * center = [UNUserNotificationCenter currentNotificationCenter];
+    
+    if ([[UIApplication sharedApplication] isRegisteredForRemoteNotifications]) {
+        NSLog(@"Application already registered");
+    } else {
+        
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+                NSLog(@"Permission Given");
+                [[UIApplication sharedApplication] registerForRemoteNotifications];
+                
+            } else {
+                NSLog(@"Permission Not given");
+            }
+        }];
+    }
+}
+
+
+#pragma mark - API
+
+- (void)uploadPushNotificationDeviceToken:(NSString *)token {
+    
+    NSString * urlString = [NSString stringWithFormat:@"http://wisekai.com:8085/api/v1/setup/addToken/%@", token];
+    
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+    
+    NSURL * url = [NSURL URLWithString:urlString];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+                                                           cachePolicy:NSURLRequestReloadIgnoringCacheData
+                                                       timeoutInterval:5.0];
+    
+    sessionConfiguration.allowsCellularAccess = YES;
+    
+    NSURLSession * urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
+    
+    [[urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+            
+            NSLog(@"Response Received");
+            
+        }
+    }] resume];
+    
+}
+
+
+
 
 
 @end
