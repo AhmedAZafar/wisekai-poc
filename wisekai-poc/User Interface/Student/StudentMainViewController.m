@@ -105,6 +105,7 @@
 }
 
 - (void)setToolbar {
+    /*
     //Set up Search Icon
     UITapGestureRecognizer * searchTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didSelectSearchIcon)];
     
@@ -127,7 +128,7 @@
     [likeView addSubview:[UIImageView getNavBarImageViewForIcon:@"toolbar-like"]];
     
     UIBarButtonItem * likeBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:likeView];
-    
+    */
     //Set up Calendar Icon
     UITapGestureRecognizer * calendarTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didSelectCalendarIcon)];
     
@@ -166,7 +167,9 @@
     
     UIBarButtonItem * flexibleSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
-    self.bottomToolbar.items = @[searchBarButtonItem, flexibleSpace,likeBarButtonItem,flexibleSpace, calendarBarButtonItem,flexibleSpace, notificationBarButtonItem,flexibleSpace, userBarButtonItem];
+    //self.bottomToolbar.items = @[searchBarButtonItem, flexibleSpace,likeBarButtonItem,flexibleSpace, calendarBarButtonItem,flexibleSpace, notificationBarButtonItem,flexibleSpace, userBarButtonItem];
+    
+    self.bottomToolbar.items = @[calendarBarButtonItem, flexibleSpace, notificationBarButtonItem, flexibleSpace, userBarButtonItem];
 }
 
 #pragma mark - Tap Gesture Callback Selectors

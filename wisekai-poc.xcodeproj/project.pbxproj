@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BB9AA3EFAA941A7FCA11431 /* Pods_wisekai_poc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD9D9B07F11832CA60E0720 /* Pods_wisekai_poc.framework */; };
+		062A471B2B9E3D3644C57019 /* Pods_wisekai_pocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF956BF76E4BD883FC37A19E /* Pods_wisekai_pocTests.framework */; };
 		7C62059921CAA88900A938F2 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62059821CAA88900A938F2 /* UserViewController.m */; };
 		7C62059D21CAB1A800A938F2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62059C21CAB1A800A938F2 /* MapViewController.m */; };
 		7CA984BF21A5B5F50062F088 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA984BE21A5B5F50062F088 /* AppDelegate.m */; };
@@ -15,6 +15,12 @@
 		7CA984CA21A5B5F70062F088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA984C821A5B5F70062F088 /* LaunchScreen.storyboard */; };
 		7CA984CD21A5B5F70062F088 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA984CC21A5B5F70062F088 /* main.m */; };
 		7CA984D721A5B5F70062F088 /* wisekai_pocTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA984D621A5B5F70062F088 /* wisekai_pocTests.m */; };
+		E250F08521D8529E00DA8BE7 /* AddLessonDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250F08421D8529E00DA8BE7 /* AddLessonDetailsViewController.m */; };
+		E2718B1021D7D25A00534AD1 /* UserSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2718B0F21D7D25A00534AD1 /* UserSelection.storyboard */; };
+		E2718B1321D7EDC500534AD1 /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E2718B1221D7EDC500534AD1 /* APIHelper.m */; };
+		E2718B1621D7EEC600534AD1 /* APIRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E2718B1521D7EEC600534AD1 /* APIRequestBuilder.m */; };
+		E2718B1A21D7F8F400534AD1 /* TeacherLessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2718B1821D7F8F400534AD1 /* TeacherLessonCell.m */; };
+		E2718B1B21D7F8F400534AD1 /* TeacherLessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2718B1921D7F8F400534AD1 /* TeacherLessonCell.xib */; };
 		E2AD722421C700E1003AF9E3 /* Student.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AD722321C700E1003AF9E3 /* Student.storyboard */; };
 		E2AD722721C700F6003AF9E3 /* StudentMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD722621C700F6003AF9E3 /* StudentMainViewController.m */; };
 		E2AD722B21C70436003AF9E3 /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD722A21C70436003AF9E3 /* UIHelper.m */; };
@@ -28,11 +34,19 @@
 		E2AD724921C9DF1F003AF9E3 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724821C9DF1F003AF9E3 /* SignUpViewController.m */; };
 		E2AD724D21C9E9E2003AF9E3 /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */; };
 		E2AD725521CAE2B6003AF9E3 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AD725421CAE2B6003AF9E3 /* Map.storyboard */; };
+		E2CE32B721D64DAB00164445 /* APICalls.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CE32B621D64DAB00164445 /* APICalls.m */; };
+		E2CE32B921D64E2700164445 /* APITest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE32B821D64E2700164445 /* APITest.storyboard */; };
+		E2CE32BC21D64E4900164445 /* APICallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CE32BB21D64E4900164445 /* APICallViewController.m */; };
+		E2CE32BF21D71FA400164445 /* SignUpPersonalDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CE32BE21D71FA400164445 /* SignUpPersonalDetailsViewController.m */; };
+		E2CE32C221D7B4C300164445 /* SignUpQualificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CE32C121D7B4C300164445 /* SignUpQualificationViewController.m */; };
+		E2CE32C521D7B4D500164445 /* SignUpInterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CE32C421D7B4D500164445 /* SignUpInterestViewController.m */; };
 		E2D398FA21BC57F000845B25 /* UIColor+Wisekai.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D398F921BC57F000845B25 /* UIColor+Wisekai.m */; };
 		E2D3991C21C049D500845B25 /* UserSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3991A21C049D500845B25 /* UserSelectionViewController.m */; };
-		E2D3991D21C049D500845B25 /* UserSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D3991B21C049D500845B25 /* UserSelectionViewController.xib */; };
 		E2D3992C21C18FA500845B25 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D3992B21C18FA500845B25 /* User.m */; };
-		F9CA746604FCF6A3CE9D9684 /* Pods_wisekai_pocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325573EE2918866AD7D74278 /* Pods_wisekai_pocTests.framework */; };
+		E2E2976821D0FB1B00A35FD0 /* Teacher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E2976721D0FB1B00A35FD0 /* Teacher.storyboard */; };
+		E2E2976B21D0FD9000A35FD0 /* TeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E2976A21D0FD9000A35FD0 /* TeacherViewController.m */; };
+		E2E2976F21D107AF00A35FD0 /* AddLessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E2976E21D107AF00A35FD0 /* AddLessonViewController.m */; };
+		EF8DDA178025AA03FB0A79B5 /* Pods_wisekai_poc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B496A5B12E89F291018C665 /* Pods_wisekai_poc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		325573EE2918866AD7D74278 /* Pods_wisekai_pocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wisekai_pocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D3882F6026AC601B061429C /* Pods-wisekai-poc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-poc.release.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc.release.xcconfig"; sourceTree = "<group>"; };
-		6C7442C6882BB038D7DC2B2F /* Pods-wisekai-poc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-poc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc.debug.xcconfig"; sourceTree = "<group>"; };
+		3148D0CAB1F6337A998DB1ED /* Pods-wisekai-pocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-pocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-pocTests/Pods-wisekai-pocTests.debug.xcconfig"; sourceTree = "<group>"; };
+		414B4E92262DCC6B140ADB13 /* Pods-wisekai-poc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-poc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc.debug.xcconfig"; sourceTree = "<group>"; };
+		4D7D1580008A758F5CAE1C9C /* Pods-wisekai-pocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-pocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-pocTests/Pods-wisekai-pocTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C62059721CAA88900A938F2 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		7C62059821CAA88900A938F2 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		7C62059B21CAB1A800A938F2 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -63,9 +77,19 @@
 		7CA984D221A5B5F70062F088 /* wisekai-pocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wisekai-pocTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA984D621A5B5F70062F088 /* wisekai_pocTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wisekai_pocTests.m; sourceTree = "<group>"; };
 		7CA984D821A5B5F70062F088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A29678102B861DC9FFD60020 /* Pods-wisekai-pocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-pocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-pocTests/Pods-wisekai-pocTests.release.xcconfig"; sourceTree = "<group>"; };
-		CCABAB79CCD0866594D4B6B1 /* Pods-wisekai-pocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-pocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-pocTests/Pods-wisekai-pocTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CDD9D9B07F11832CA60E0720 /* Pods_wisekai_poc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wisekai_poc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B496A5B12E89F291018C665 /* Pods_wisekai_poc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wisekai_poc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8561B014D0D2E6A5223A562 /* Pods-wisekai-poc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisekai-poc.release.xcconfig"; path = "Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc.release.xcconfig"; sourceTree = "<group>"; };
+		CF956BF76E4BD883FC37A19E /* Pods_wisekai_pocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wisekai_pocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E250F08321D8529E00DA8BE7 /* AddLessonDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddLessonDetailsViewController.h; sourceTree = "<group>"; };
+		E250F08421D8529E00DA8BE7 /* AddLessonDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddLessonDetailsViewController.m; sourceTree = "<group>"; };
+		E2718B0F21D7D25A00534AD1 /* UserSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSelection.storyboard; sourceTree = "<group>"; };
+		E2718B1121D7EDC500534AD1 /* APIHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIHelper.h; sourceTree = "<group>"; };
+		E2718B1221D7EDC500534AD1 /* APIHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIHelper.m; sourceTree = "<group>"; };
+		E2718B1421D7EEC600534AD1 /* APIRequestBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRequestBuilder.h; sourceTree = "<group>"; };
+		E2718B1521D7EEC600534AD1 /* APIRequestBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIRequestBuilder.m; sourceTree = "<group>"; };
+		E2718B1721D7F8F400534AD1 /* TeacherLessonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeacherLessonCell.h; sourceTree = "<group>"; };
+		E2718B1821D7F8F400534AD1 /* TeacherLessonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeacherLessonCell.m; sourceTree = "<group>"; };
+		E2718B1921D7F8F400534AD1 /* TeacherLessonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherLessonCell.xib; sourceTree = "<group>"; };
 		E2AD722321C700E1003AF9E3 /* Student.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Student.storyboard; sourceTree = "<group>"; };
 		E2AD722521C700F6003AF9E3 /* StudentMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentMainViewController.h; sourceTree = "<group>"; };
 		E2AD722621C700F6003AF9E3 /* StudentMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentMainViewController.m; sourceTree = "<group>"; };
@@ -89,13 +113,28 @@
 		E2AD724B21C9E9E2003AF9E3 /* LessonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessonViewController.h; sourceTree = "<group>"; };
 		E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LessonViewController.m; sourceTree = "<group>"; };
 		E2AD725421CAE2B6003AF9E3 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		E2CE32B521D64DAB00164445 /* APICalls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APICalls.h; sourceTree = "<group>"; };
+		E2CE32B621D64DAB00164445 /* APICalls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APICalls.m; sourceTree = "<group>"; };
+		E2CE32B821D64E2700164445 /* APITest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = APITest.storyboard; sourceTree = "<group>"; };
+		E2CE32BA21D64E4900164445 /* APICallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APICallViewController.h; sourceTree = "<group>"; };
+		E2CE32BB21D64E4900164445 /* APICallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APICallViewController.m; sourceTree = "<group>"; };
+		E2CE32BD21D71FA400164445 /* SignUpPersonalDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpPersonalDetailsViewController.h; sourceTree = "<group>"; };
+		E2CE32BE21D71FA400164445 /* SignUpPersonalDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpPersonalDetailsViewController.m; sourceTree = "<group>"; };
+		E2CE32C021D7B4C300164445 /* SignUpQualificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpQualificationViewController.h; sourceTree = "<group>"; };
+		E2CE32C121D7B4C300164445 /* SignUpQualificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpQualificationViewController.m; sourceTree = "<group>"; };
+		E2CE32C321D7B4D500164445 /* SignUpInterestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpInterestViewController.h; sourceTree = "<group>"; };
+		E2CE32C421D7B4D500164445 /* SignUpInterestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpInterestViewController.m; sourceTree = "<group>"; };
 		E2D398F821BC57F000845B25 /* UIColor+Wisekai.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Wisekai.h"; sourceTree = "<group>"; };
 		E2D398F921BC57F000845B25 /* UIColor+Wisekai.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Wisekai.m"; sourceTree = "<group>"; };
 		E2D3991921C049D500845B25 /* UserSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSelectionViewController.h; sourceTree = "<group>"; };
 		E2D3991A21C049D500845B25 /* UserSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserSelectionViewController.m; sourceTree = "<group>"; };
-		E2D3991B21C049D500845B25 /* UserSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSelectionViewController.xib; sourceTree = "<group>"; };
 		E2D3992A21C18FA500845B25 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E2D3992B21C18FA500845B25 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E2E2976721D0FB1B00A35FD0 /* Teacher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teacher.storyboard; sourceTree = "<group>"; };
+		E2E2976921D0FD9000A35FD0 /* TeacherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeacherViewController.h; sourceTree = "<group>"; };
+		E2E2976A21D0FD9000A35FD0 /* TeacherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeacherViewController.m; sourceTree = "<group>"; };
+		E2E2976D21D107AF00A35FD0 /* AddLessonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddLessonViewController.h; sourceTree = "<group>"; };
+		E2E2976E21D107AF00A35FD0 /* AddLessonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddLessonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BB9AA3EFAA941A7FCA11431 /* Pods_wisekai_poc.framework in Frameworks */,
+				EF8DDA178025AA03FB0A79B5 /* Pods_wisekai_poc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,18 +150,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9CA746604FCF6A3CE9D9684 /* Pods_wisekai_pocTests.framework in Frameworks */,
+				062A471B2B9E3D3644C57019 /* Pods_wisekai_pocTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21735CCFF214AB4553734346 /* Frameworks */ = {
+		0C5E04B5E4E163625960042B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CDD9D9B07F11832CA60E0720 /* Pods_wisekai_poc.framework */,
-				325573EE2918866AD7D74278 /* Pods_wisekai_pocTests.framework */,
+				9B496A5B12E89F291018C665 /* Pods_wisekai_poc.framework */,
+				CF956BF76E4BD883FC37A19E /* Pods_wisekai_pocTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,8 +191,8 @@
 				7CA984BC21A5B5F50062F088 /* wisekai-poc */,
 				7CA984D521A5B5F70062F088 /* wisekai-pocTests */,
 				7CA984BB21A5B5F50062F088 /* Products */,
-				C4316D839058427B05E9C0EE /* Pods */,
-				21735CCFF214AB4553734346 /* Frameworks */,
+				DF1037E2FF8879622E4F33D9 /* Pods */,
+				0C5E04B5E4E163625960042B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +208,7 @@
 		7CA984BC21A5B5F50062F088 /* wisekai-poc */ = {
 			isa = PBXGroup;
 			children = (
+				E2CE32B421D64D9300164445 /* Api Test */,
 				E2AD723221C997ED003AF9E3 /* wisekai-poc.entitlements */,
 				E2AD722821C70424003AF9E3 /* Helpers */,
 				E2AD722021C700BD003AF9E3 /* User Interface */,
@@ -202,15 +242,25 @@
 			path = "App Delegate";
 			sourceTree = "<group>";
 		};
-		C4316D839058427B05E9C0EE /* Pods */ = {
+		DF1037E2FF8879622E4F33D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6C7442C6882BB038D7DC2B2F /* Pods-wisekai-poc.debug.xcconfig */,
-				4D3882F6026AC601B061429C /* Pods-wisekai-poc.release.xcconfig */,
-				CCABAB79CCD0866594D4B6B1 /* Pods-wisekai-pocTests.debug.xcconfig */,
-				A29678102B861DC9FFD60020 /* Pods-wisekai-pocTests.release.xcconfig */,
+				414B4E92262DCC6B140ADB13 /* Pods-wisekai-poc.debug.xcconfig */,
+				C8561B014D0D2E6A5223A562 /* Pods-wisekai-poc.release.xcconfig */,
+				3148D0CAB1F6337A998DB1ED /* Pods-wisekai-pocTests.debug.xcconfig */,
+				4D7D1580008A758F5CAE1C9C /* Pods-wisekai-pocTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2718B1C21D7F8F700534AD1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E2718B1721D7F8F400534AD1 /* TeacherLessonCell.h */,
+				E2718B1821D7F8F400534AD1 /* TeacherLessonCell.m */,
+				E2718B1921D7F8F400534AD1 /* TeacherLessonCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E2AD722021C700BD003AF9E3 /* User Interface */ = {
@@ -240,6 +290,11 @@
 		E2AD722221C700CB003AF9E3 /* Teacher */ = {
 			isa = PBXGroup;
 			children = (
+				E2718B1C21D7F8F700534AD1 /* Cells */,
+				E2E2976C21D1079F00A35FD0 /* Add Lesson */,
+				E2E2976721D0FB1B00A35FD0 /* Teacher.storyboard */,
+				E2E2976921D0FD9000A35FD0 /* TeacherViewController.h */,
+				E2E2976A21D0FD9000A35FD0 /* TeacherViewController.m */,
 			);
 			path = Teacher;
 			sourceTree = "<group>";
@@ -289,6 +344,12 @@
 			children = (
 				E2AD724721C9DF1F003AF9E3 /* SignUpViewController.h */,
 				E2AD724821C9DF1F003AF9E3 /* SignUpViewController.m */,
+				E2CE32BD21D71FA400164445 /* SignUpPersonalDetailsViewController.h */,
+				E2CE32BE21D71FA400164445 /* SignUpPersonalDetailsViewController.m */,
+				E2CE32C021D7B4C300164445 /* SignUpQualificationViewController.h */,
+				E2CE32C121D7B4C300164445 /* SignUpQualificationViewController.m */,
+				E2CE32C321D7B4D500164445 /* SignUpInterestViewController.h */,
+				E2CE32C421D7B4D500164445 /* SignUpInterestViewController.m */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -300,6 +361,38 @@
 				E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */,
 			);
 			path = Lesson;
+			sourceTree = "<group>";
+		};
+		E2CE32B421D64D9300164445 /* Api Test */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE32C721D7C9B600164445 /* Unit Tests */,
+				E2CE32C621D7C9AB00164445 /* API Calls */,
+			);
+			path = "Api Test";
+			sourceTree = "<group>";
+		};
+		E2CE32C621D7C9AB00164445 /* API Calls */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE32B521D64DAB00164445 /* APICalls.h */,
+				E2CE32B621D64DAB00164445 /* APICalls.m */,
+				E2718B1421D7EEC600534AD1 /* APIRequestBuilder.h */,
+				E2718B1521D7EEC600534AD1 /* APIRequestBuilder.m */,
+				E2718B1121D7EDC500534AD1 /* APIHelper.h */,
+				E2718B1221D7EDC500534AD1 /* APIHelper.m */,
+			);
+			path = "API Calls";
+			sourceTree = "<group>";
+		};
+		E2CE32C721D7C9B600164445 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE32B821D64E2700164445 /* APITest.storyboard */,
+				E2CE32BA21D64E4900164445 /* APICallViewController.h */,
+				E2CE32BB21D64E4900164445 /* APICallViewController.m */,
+			);
+			path = "Unit Tests";
 			sourceTree = "<group>";
 		};
 		E2D398F721BC57D100845B25 /* Categories */ = {
@@ -328,7 +421,7 @@
 			children = (
 				E2D3991921C049D500845B25 /* UserSelectionViewController.h */,
 				E2D3991A21C049D500845B25 /* UserSelectionViewController.m */,
-				E2D3991B21C049D500845B25 /* UserSelectionViewController.xib */,
+				E2718B0F21D7D25A00534AD1 /* UserSelection.storyboard */,
 			);
 			path = "User Selection";
 			sourceTree = "<group>";
@@ -342,6 +435,17 @@
 			path = "Shared Instances";
 			sourceTree = "<group>";
 		};
+		E2E2976C21D1079F00A35FD0 /* Add Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				E2E2976D21D107AF00A35FD0 /* AddLessonViewController.h */,
+				E2E2976E21D107AF00A35FD0 /* AddLessonViewController.m */,
+				E250F08321D8529E00DA8BE7 /* AddLessonDetailsViewController.h */,
+				E250F08421D8529E00DA8BE7 /* AddLessonDetailsViewController.m */,
+			);
+			path = "Add Lesson";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,11 +453,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CA984DB21A5B5F70062F088 /* Build configuration list for PBXNativeTarget "wisekai-poc" */;
 			buildPhases = (
-				2DFCC4C8D0F581C89A8C5DA9 /* [CP] Check Pods Manifest.lock */,
+				CE2FD9E4193EE2141787A92C /* [CP] Check Pods Manifest.lock */,
 				7CA984B621A5B5F50062F088 /* Sources */,
 				7CA984B721A5B5F50062F088 /* Frameworks */,
 				7CA984B821A5B5F50062F088 /* Resources */,
-				B8B5B6766E57024E34D83A60 /* [CP] Embed Pods Frameworks */,
+				1248306D7437A9FF73A91DFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,7 +472,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CA984DE21A5B5F70062F088 /* Build configuration list for PBXNativeTarget "wisekai-pocTests" */;
 			buildPhases = (
-				860134A81D6E39FACE888B49 /* [CP] Check Pods Manifest.lock */,
+				62A1A0D8DFE0A0D0C9695354 /* [CP] Check Pods Manifest.lock */,
 				7CA984CE21A5B5F70062F088 /* Sources */,
 				7CA984CF21A5B5F70062F088 /* Frameworks */,
 				7CA984D021A5B5F70062F088 /* Resources */,
@@ -434,8 +538,11 @@
 				E2AD725521CAE2B6003AF9E3 /* Map.storyboard in Resources */,
 				7CA984CA21A5B5F70062F088 /* LaunchScreen.storyboard in Resources */,
 				7CA984C721A5B5F70062F088 /* Assets.xcassets in Resources */,
-				E2D3991D21C049D500845B25 /* UserSelectionViewController.xib in Resources */,
+				E2718B1021D7D25A00534AD1 /* UserSelection.storyboard in Resources */,
+				E2CE32B921D64E2700164445 /* APITest.storyboard in Resources */,
+				E2E2976821D0FB1B00A35FD0 /* Teacher.storyboard in Resources */,
 				E2AD723B21C9B380003AF9E3 /* LessonCell.xib in Resources */,
+				E2718B1B21D7F8F400534AD1 /* TeacherLessonCell.xib in Resources */,
 				E2AD723E21C9D742003AF9E3 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,25 +557,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2DFCC4C8D0F581C89A8C5DA9 /* [CP] Check Pods Manifest.lock */ = {
+		1248306D7437A9FF73A91DFF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+				"${BUILT_PRODUCTS_DIR}/XLForm/XLForm.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wisekai-poc-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLForm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		860134A81D6E39FACE888B49 /* [CP] Check Pods Manifest.lock */ = {
+		62A1A0D8DFE0A0D0C9695354 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -486,28 +603,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B8B5B6766E57024E34D83A60 /* [CP] Embed Pods Frameworks */ = {
+		CE2FD9E4193EE2141787A92C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+				"$(DERIVED_FILE_DIR)/Pods-wisekai-poc-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -517,21 +628,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E2976F21D107AF00A35FD0 /* AddLessonViewController.m in Sources */,
 				E2D398FA21BC57F000845B25 /* UIColor+Wisekai.m in Sources */,
+				E2CE32BF21D71FA400164445 /* SignUpPersonalDetailsViewController.m in Sources */,
 				E2AD724D21C9E9E2003AF9E3 /* LessonViewController.m in Sources */,
+				E2CE32BC21D64E4900164445 /* APICallViewController.m in Sources */,
 				7CA984CD21A5B5F70062F088 /* main.m in Sources */,
 				E2D3991C21C049D500845B25 /* UserSelectionViewController.m in Sources */,
 				E2AD722E21C70C0D003AF9E3 /* UIImageView+WiseKai.m in Sources */,
 				E2D3992C21C18FA500845B25 /* User.m in Sources */,
 				7C62059921CAA88900A938F2 /* UserViewController.m in Sources */,
 				E2AD722721C700F6003AF9E3 /* StudentMainViewController.m in Sources */,
+				E2718B1621D7EEC600534AD1 /* APIRequestBuilder.m in Sources */,
 				E2AD723121C70D09003AF9E3 /* UIView+Wisekai.m in Sources */,
 				E2AD723A21C9B380003AF9E3 /* LessonCell.m in Sources */,
+				E2CE32B721D64DAB00164445 /* APICalls.m in Sources */,
 				E2AD722B21C70436003AF9E3 /* UIHelper.m in Sources */,
 				7C62059D21CAB1A800A938F2 /* MapViewController.m in Sources */,
+				E2718B1321D7EDC500534AD1 /* APIHelper.m in Sources */,
+				E2718B1A21D7F8F400534AD1 /* TeacherLessonCell.m in Sources */,
+				E2CE32C221D7B4C300164445 /* SignUpQualificationViewController.m in Sources */,
+				E250F08521D8529E00DA8BE7 /* AddLessonDetailsViewController.m in Sources */,
 				E2AD724621C9DAF9003AF9E3 /* SignInViewController.m in Sources */,
 				E2AD724921C9DF1F003AF9E3 /* SignUpViewController.m in Sources */,
+				E2E2976B21D0FD9000A35FD0 /* TeacherViewController.m in Sources */,
 				7CA984BF21A5B5F50062F088 /* AppDelegate.m in Sources */,
+				E2CE32C521D7B4D500164445 /* SignUpInterestViewController.m in Sources */,
 				E2AD724121C9D75B003AF9E3 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,7 +802,7 @@
 		};
 		7CA984DC21A5B5F70062F088 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C7442C6882BB038D7DC2B2F /* Pods-wisekai-poc.debug.xcconfig */;
+			baseConfigurationReference = 414B4E92262DCC6B140ADB13 /* Pods-wisekai-poc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "wisekai-poc/wisekai-poc.entitlements";
@@ -700,7 +822,7 @@
 		};
 		7CA984DD21A5B5F70062F088 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D3882F6026AC601B061429C /* Pods-wisekai-poc.release.xcconfig */;
+			baseConfigurationReference = C8561B014D0D2E6A5223A562 /* Pods-wisekai-poc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "wisekai-poc/wisekai-poc.entitlements";
@@ -721,7 +843,7 @@
 		};
 		7CA984DF21A5B5F70062F088 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCABAB79CCD0866594D4B6B1 /* Pods-wisekai-pocTests.debug.xcconfig */;
+			baseConfigurationReference = 3148D0CAB1F6337A998DB1ED /* Pods-wisekai-pocTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -741,7 +863,7 @@
 		};
 		7CA984E021A5B5F70062F088 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A29678102B861DC9FFD60020 /* Pods-wisekai-pocTests.release.xcconfig */;
+			baseConfigurationReference = 4D7D1580008A758F5CAE1C9C /* Pods-wisekai-pocTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

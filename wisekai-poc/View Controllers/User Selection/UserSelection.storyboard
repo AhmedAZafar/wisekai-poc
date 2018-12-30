@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PYv-yd-C4S">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Selection View Controller-->
+        <scene sceneID="t8P-EG-N3d">
+            <objects>
+                <viewController id="PYv-yd-C4S" customClass="UserSelectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ADV-tn-a2a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="3hl-aV-758">
+                                <rect key="frame" x="67.5" y="45" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2gs-zU-a9V"/>
+                                    <constraint firstAttribute="height" constant="240" id="XY8-Hh-eZt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQU-Xm-hb5">
+                                <rect key="frame" x="117.5" y="305" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Kcw-Zo-98m"/>
+                                    <constraint firstAttribute="width" constant="140" id="NK6-EZ-Yiv"/>
+                                </constraints>
+                                <state key="normal" title="I'm here to teach">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectTeacherButton:" destination="PYv-yd-C4S" eventType="touchUpInside" id="zci-1u-ui9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVD-tB-pmW">
+                                <rect key="frame" x="132.5" y="437" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="B97-K7-3nE"/>
+                                    <constraint firstAttribute="width" constant="110" id="mPB-d2-AKY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="I'm here to learn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectStudentButton:" destination="PYv-yd-C4S" eventType="touchUpInside" id="Clj-vh-Q5W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFf-08-09d">
+                                <rect key="frame" x="97.5" y="577" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="ELJ-Ej-mEz"/>
+                                    <constraint firstAttribute="height" constant="40" id="SDA-e6-6rk"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Already have an account">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectExisitngAccountButton:" destination="PYv-yd-C4S" eventType="touchUpInside" id="StX-yH-gA9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XQU-Xm-hb5" firstAttribute="centerX" secondItem="ADV-tn-a2a" secondAttribute="centerX" id="6ma-lH-gL2"/>
+                            <constraint firstItem="3hl-aV-758" firstAttribute="centerX" secondItem="ADV-tn-a2a" secondAttribute="centerX" id="6z4-Cg-2dw"/>
+                            <constraint firstItem="3hl-aV-758" firstAttribute="top" secondItem="CwB-nX-GEY" secondAttribute="top" constant="25" id="OgQ-dW-A5h"/>
+                            <constraint firstItem="EFf-08-09d" firstAttribute="centerX" secondItem="ADV-tn-a2a" secondAttribute="centerX" id="cb6-hc-ntb"/>
+                            <constraint firstItem="YVD-tB-pmW" firstAttribute="centerX" secondItem="ADV-tn-a2a" secondAttribute="centerX" id="fMc-Rw-hNi"/>
+                            <constraint firstItem="EFf-08-09d" firstAttribute="top" secondItem="YVD-tB-pmW" secondAttribute="bottom" constant="30" id="i2x-2X-Aj3"/>
+                            <constraint firstItem="YVD-tB-pmW" firstAttribute="top" secondItem="XQU-Xm-hb5" secondAttribute="bottom" constant="-8" id="kZm-8H-KUQ"/>
+                            <constraint firstItem="XQU-Xm-hb5" firstAttribute="top" secondItem="3hl-aV-758" secondAttribute="bottom" constant="20" id="l6I-za-j67"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CwB-nX-GEY"/>
+                    </view>
+                    <connections>
+                        <outlet property="existingAccountButton" destination="EFf-08-09d" id="jOp-9k-NUV"/>
+                        <outlet property="studentButton" destination="YVD-tB-pmW" id="tvq-qE-5Pg"/>
+                        <outlet property="teacherButton" destination="XQU-Xm-hb5" id="na6-8Y-r5X"/>
+                        <segue destination="S9X-E0-rtZ" kind="show" identifier="showlogin" id="RmY-z5-pWQ"/>
+                        <segue destination="3qz-0c-rci" kind="show" identifier="showloginsignin" id="6eu-q7-Nyf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HbM-XZ-f0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="144"/>
+        </scene>
+        <!--SignInViewController-->
+        <scene sceneID="fix-5l-J0V">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="SignInViewController" id="3qz-0c-rci" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MlC-hi-gkC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jr8-3b-iWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="-37"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Lpb-UU-yPS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="S9X-E0-rtZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GiW-tu-A7Y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfS-di-g3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="800" height="800"/>
+    </resources>
+</document>

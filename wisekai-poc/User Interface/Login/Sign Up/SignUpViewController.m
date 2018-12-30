@@ -37,7 +37,12 @@
     
     if ((self.emailTextField && self.emailTextField.text.length > 0) && (self.passwordTextField && self.passwordTextField.text.length > 0) && (self.repeatPasswordTextfield && self.repeatPasswordTextfield.text.length > 0) && (self.nameTextField && self.nameTextField.text.length > 0)) {
         
-        [self.view makeToast:@"Sign Up Successful" duration:2.0 position:CSToastPositionCenter];
+        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:self.emailTextField.text forKey:@"user-email"];
+        [userDefaults setObject:self.passwordTextField.text forKey:@"user-password"];
+        [userDefaults setObject:self.nameTextField.text forKey:@"user-username"];
+        
+        [self performSegueWithIdentifier:@"signupdetails" sender:nil];
         
     } else if (self.nameTextField.text.length <= 0){
         [self.view makeToast:@"Please enter your name" duration:2.0 position:CSToastPositionCenter];

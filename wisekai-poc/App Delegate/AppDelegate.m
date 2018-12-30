@@ -27,20 +27,50 @@
     
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     
-    if ([FBSDKAccessToken currentAccessToken]) {
-        //Take User TO mainVC - Extra Logic in future to select between student and teacher
-        UIStoryboard * studentStoryBoard = [UIStoryboard storyboardWithName:@"Student" bundle:nil];
-        self.window.rootViewController = studentStoryBoard.instantiateInitialViewController;
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString * userType = [userDefaults valueForKey:@"user-type"];
+    
+    NSString * bearerToken = [userDefaults valueForKey:@"bearer-token"];
+    
+    if (bearerToken && bearerToken.length > 0 && userType && userType.length > 0) {
         
+        if ([userType isEqualToString:@"student"]) {
+            [self presentStudentStoryboard];
+        } else if ([userType isEqualToString:@"teacher"]) {
+            [self presentTeacherStoryboard];
+        } else {
+            [self presentUserSelection];
+        }
+        
+    } else if ([FBSDKAccessToken currentAccessToken] && (userType.length > 0)) {
+        //Take User TO mainVC - Extra Logic in future to select between student and teacher
+        
+        if ([userType isEqualToString:@"student"]) {
+            
+            [self presentStudentStoryboard];
+            
+        } else if ([userType isEqualToString:@"teacher"]) {
+            
+            [self presentTeacherStoryboard];
+            
+        } else {
+            [self presentUserSelection];
+        }
     } else {
-        //Take them to Login VC
-        UserSelectionViewController * userSVC = [[UserSelectionViewController alloc] initWithNibName:@"UserSelectionViewController" bundle:nil];
-        self.window.rootViewController = userSVC;
+        
+        [self presentUserSelection];
     }
+    
+    //UIStoryboard * devBoard = [UIStoryboard storyboardWithName:@"APITest" bundle:nil];
+    //UIStoryboard * devBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    //rself.window.rootViewController = devBoard.instantiateInitialViewController;
+    
+    //[self presentTeacherStoryboard];
     
     [self.window makeKeyAndVisible];
     
-    [self registerForNotifications];
+    //[self registerForNotifications];
     
     return YES;
 }
@@ -89,15 +119,6 @@
                                     stringByReplacingOccurrencesOfString: @" " withString: @""];
     
     [self uploadPushNotificationDeviceToken:deviceTokenString];
-    
-
-    
-    
-    NSLog(@"deivce Token is: %@", deviceToken);
-    
-
-    
-    NSLog(@"The generated device token string is : %@",deviceTokenString);
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
@@ -157,8 +178,28 @@
     
 }
 
+#pragma mark - Helpers
+
+- (void)presentStudentStoryboard {
+    
+    UIStoryboard * studentBoard = [UIStoryboard storyboardWithName:@"Student" bundle:nil];
+    self.window.rootViewController = studentBoard.instantiateInitialViewController;
+}
 
 
+- (void)presentTeacherStoryboard {
+    
+    UIStoryboard * teacherBoard = [UIStoryboard storyboardWithName:@"Teacher" bundle:nil];
+    self.window.rootViewController = teacherBoard.instantiateInitialViewController;
+}
+
+
+
+- (void)presentUserSelection {
+    
+    UIStoryboard * userSelectionBoard = [UIStoryboard storyboardWithName:@"UserSelection" bundle:nil];
+    self.window.rootViewController = userSelectionBoard.instantiateInitialViewController;
+}
 
 
 @end

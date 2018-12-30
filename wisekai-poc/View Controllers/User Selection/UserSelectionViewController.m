@@ -30,8 +30,13 @@
 
 #pragma mark - IBActions
 
-- (IBAction)didSelectTeacherButotn:(id)sender {
-    [self.view makeToast:@"Feature Under Development" duration:3.0 position:CSToastPositionCenter];
+- (IBAction)didSelectTeacherButton:(id)sender {
+    //[self.view makeToast:@"Feature Under Development" duration:3.0 position:CSToastPositionCenter];
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [userDefaults setObject:@"teacher" forKey:@"user-type"];
+    
+    [self performSegueWithIdentifier:@"showlogin" sender:nil];
 }
 - (IBAction)didSelectStudentButton:(id)sender {
     
@@ -39,7 +44,10 @@
     
     [userDefaults setObject:@"student" forKey:@"user-type"];
     
-    [self segueToNext];
+    [self performSegueWithIdentifier:@"showlogin" sender:nil];
+}
+- (IBAction)didSelectExisitngAccountButton:(id)sender {
+    [self performSegueWithIdentifier:@"showloginsignin" sender:nil];
 }
 
 #pragma mark - Helpers
@@ -52,30 +60,15 @@
     
     self.studentButton.backgroundColor = [UIColor wiseKaiGreenColor];
     [self roundButton:self.studentButton];
+    
+    self.existingAccountButton.backgroundColor = [UIColor wiseKaiDarkPurpleColor];
+    self.existingAccountButton.layer.cornerRadius = self.existingAccountButton.frame.size.height / 2;
+    self.existingAccountButton.clipsToBounds = YES;
 }
 
 - (void)roundButton:(UIButton *)buttonToRound {
     buttonToRound.layer.cornerRadius = buttonToRound.frame.size.width / 2;
     buttonToRound.clipsToBounds = YES;
-}
-
-- (void)segueToNext {
-    
-    UIStoryboard * loginBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-
-    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:loginBoard.instantiateInitialViewController];
-    
-    UIImageView * backButtonImageView = [UIImageView getNavBarImageViewForIcon:@"back"];
-    
-    UIView * backButtonItemView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
-    
-    [backButtonItemView addSubview:backButtonImageView];
-    
-    UIBarButtonItem * backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButtonItemView];
-    
-    navController.navigationItem.backBarButtonItem = backButtonItem;
-    
-    [self presentViewController:navController animated:YES completion:nil];
 }
 
 

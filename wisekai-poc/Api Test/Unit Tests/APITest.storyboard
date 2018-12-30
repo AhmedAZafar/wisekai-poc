@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jSB-YF-T3r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Call View Controller-->
+        <scene sceneID="E1X-7i-G8i">
+            <objects>
+                <viewController id="uMp-gH-0Eo" customClass="APICallViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FYI-24-Uk9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6d-Ao-iTe">
+                                <rect key="frame" x="135.5" y="118" width="104" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="asZ-pj-No1"/>
+                                    <constraint firstAttribute="height" constant="30" id="c3c-Hg-FY1"/>
+                                </constraints>
+                                <state key="normal" title="Create Student"/>
+                                <connections>
+                                    <action selector="createStudent:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="InB-Ok-9AN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uE-Hc-EMC">
+                                <rect key="frame" x="135" y="156" width="105" height="30"/>
+                                <state key="normal" title="Create Teacher"/>
+                                <connections>
+                                    <action selector="createTeacher:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="fqe-39-bGO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ov-9O-WHn">
+                                <rect key="frame" x="132.5" y="194" width="110" height="30"/>
+                                <state key="normal" title="Update Teacher"/>
+                                <connections>
+                                    <action selector="updateTeacher:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="gpI-SI-a0M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eix-xk-vPS">
+                                <rect key="frame" x="133" y="232" width="109" height="30"/>
+                                <state key="normal" title="Update Student"/>
+                                <connections>
+                                    <action selector="updateStudent:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="bgu-Vi-Ex5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqi-yk-FU3">
+                                <rect key="frame" x="116" y="270" width="143" height="30"/>
+                                <state key="normal" title="Get Student Lessons"/>
+                                <connections>
+                                    <action selector="getStudentLessons:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="nHh-Cx-gye"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBw-It-OLh">
+                                <rect key="frame" x="115.5" y="308" width="144" height="30"/>
+                                <state key="normal" title="Get Teacher Lessons"/>
+                                <connections>
+                                    <action selector="getTeacherLessons:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="8kn-zD-3Ij"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9O-9t-b1g">
+                                <rect key="frame" x="147.5" y="346" width="80" height="30"/>
+                                <state key="normal" title="Add Lesson"/>
+                                <connections>
+                                    <action selector="addLesson:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="pri-Vn-t2H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdm-pv-HKQ">
+                                <rect key="frame" x="134.5" y="384" width="106" height="30"/>
+                                <state key="normal" title="Create Booking"/>
+                                <connections>
+                                    <action selector="addLesson:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="YKU-bL-MuC"/>
+                                    <action selector="createBoking:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="lFx-d3-mou"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBL-dF-dCF">
+                                <rect key="frame" x="16" y="422" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fZX-fE-TWg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sge-fs-oTK">
+                                <rect key="frame" x="131" y="498" width="113" height="30"/>
+                                <state key="normal" title="Search For Slots"/>
+                                <connections>
+                                    <action selector="didPressSlotSearch:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="r97-Zc-RhH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGu-uV-27K">
+                                <rect key="frame" x="124" y="460" width="127" height="30"/>
+                                <state key="normal" title="Search For Lesson"/>
+                                <connections>
+                                    <action selector="didPressSearchLesson:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="8tJ-2w-o3d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbZ-cm-hgD">
+                                <rect key="frame" x="129.5" y="536" width="116" height="30"/>
+                                <state key="normal" title="Subscribe to slot"/>
+                                <connections>
+                                    <action selector="didSelectSubscribeForSlot:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="Gdz-Qn-VoS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4i-KU-MPd">
+                                <rect key="frame" x="97" y="574" width="181" height="30"/>
+                                <state key="normal" title="Get Subscriptions Student"/>
+                                <connections>
+                                    <action selector="didSelectListSubscriptions:" destination="uMp-gH-0Eo" eventType="touchUpInside" id="thE-aq-O5a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z9O-9t-b1g" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="0kc-Jd-z3R"/>
+                            <constraint firstItem="P6d-Ao-iTe" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="6FV-2N-48O"/>
+                            <constraint firstItem="C4i-KU-MPd" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="98q-0B-gZr"/>
+                            <constraint firstItem="MGu-uV-27K" firstAttribute="top" secondItem="DBL-dF-dCF" secondAttribute="bottom" constant="8" id="Bm4-OT-E1L"/>
+                            <constraint firstItem="FBw-It-OLh" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="FJM-bR-Veb"/>
+                            <constraint firstItem="Oqi-yk-FU3" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="JOE-HG-hvi"/>
+                            <constraint firstItem="vdm-pv-HKQ" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="LPo-CN-yqn"/>
+                            <constraint firstItem="sge-fs-oTK" firstAttribute="top" secondItem="MGu-uV-27K" secondAttribute="bottom" constant="8" id="MPL-Hq-xzp"/>
+                            <constraint firstItem="Z9O-9t-b1g" firstAttribute="top" secondItem="FBw-It-OLh" secondAttribute="bottom" constant="8" id="O6r-Pq-u0h"/>
+                            <constraint firstItem="FBw-It-OLh" firstAttribute="top" secondItem="Oqi-yk-FU3" secondAttribute="bottom" constant="8" id="SS4-7f-QMZ"/>
+                            <constraint firstItem="DBL-dF-dCF" firstAttribute="top" secondItem="vdm-pv-HKQ" secondAttribute="bottom" constant="8" id="UMY-0Y-kfw"/>
+                            <constraint firstItem="Oqi-yk-FU3" firstAttribute="top" secondItem="Eix-xk-vPS" secondAttribute="bottom" constant="8" id="Vgc-tL-jrm"/>
+                            <constraint firstItem="MlV-x6-MbL" firstAttribute="trailing" secondItem="DBL-dF-dCF" secondAttribute="trailing" constant="16" id="Xmf-nQ-fhn"/>
+                            <constraint firstItem="8ov-9O-WHn" firstAttribute="top" secondItem="1uE-Hc-EMC" secondAttribute="bottom" constant="8" id="Ymb-Nt-VeG"/>
+                            <constraint firstItem="Eix-xk-vPS" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="Zsi-Gv-LVa"/>
+                            <constraint firstItem="C4i-KU-MPd" firstAttribute="top" secondItem="jbZ-cm-hgD" secondAttribute="bottom" constant="8" id="Zv4-cl-Epo"/>
+                            <constraint firstItem="MGu-uV-27K" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="bAd-V1-BG9"/>
+                            <constraint firstItem="1uE-Hc-EMC" firstAttribute="top" secondItem="P6d-Ao-iTe" secondAttribute="bottom" constant="8" id="cwK-bu-1Do"/>
+                            <constraint firstItem="P6d-Ao-iTe" firstAttribute="top" secondItem="MlV-x6-MbL" secondAttribute="top" constant="54" id="d0b-dC-nBb"/>
+                            <constraint firstItem="Eix-xk-vPS" firstAttribute="top" secondItem="8ov-9O-WHn" secondAttribute="bottom" constant="8" id="e1h-M9-9Bh"/>
+                            <constraint firstItem="1uE-Hc-EMC" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="f2N-Tm-s96"/>
+                            <constraint firstItem="vdm-pv-HKQ" firstAttribute="top" secondItem="Z9O-9t-b1g" secondAttribute="bottom" constant="8" id="g31-0f-brK"/>
+                            <constraint firstItem="DBL-dF-dCF" firstAttribute="leading" secondItem="MlV-x6-MbL" secondAttribute="leading" constant="16" id="hqs-CX-gqw"/>
+                            <constraint firstItem="8ov-9O-WHn" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="lDu-SV-Qoy"/>
+                            <constraint firstItem="jbZ-cm-hgD" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="lul-Tb-3iE"/>
+                            <constraint firstItem="sge-fs-oTK" firstAttribute="centerX" secondItem="FYI-24-Uk9" secondAttribute="centerX" id="tzQ-wz-RK4"/>
+                            <constraint firstItem="jbZ-cm-hgD" firstAttribute="top" secondItem="sge-fs-oTK" secondAttribute="bottom" constant="8" id="z1c-YP-dGA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MlV-x6-MbL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yRM-AQ-aPi"/>
+                    <connections>
+                        <outlet property="searchTextfield" destination="DBL-dF-dCF" id="5qy-Qw-it3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJW-Hv-zyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZSG-tT-izz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jSB-YF-T3r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ek-RA-UFb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uMp-gH-0Eo" kind="relationship" relationship="rootViewController" id="zf0-TQ-FoW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1i-Z1-kYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280.80000000000001" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>

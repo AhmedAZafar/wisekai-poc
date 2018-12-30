@@ -6,6 +6,8 @@ target 'wisekai-poc' do
   use_frameworks!
   pod 'FBSDKLoginKit'
   pod 'Toast', '~> 4.0.0'
+  pod 'FSCalendar'
+  pod 'XLForm', '~> 4.0'
   # Pods for wisekai-poc
 
   target 'wisekai-pocTests' do

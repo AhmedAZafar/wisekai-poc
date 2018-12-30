@@ -10,6 +10,8 @@
 #import "UIColor+Wisekai.h"
 #import <Toast/Toast.h>
 
+#import "APICalls.h"
+
 @interface SignInViewController ()
 
 @end
@@ -33,7 +35,51 @@
     [CSToastManager setQueueEnabled:NO];
     if ((self.emailTextfield && self.emailTextfield.text.length > 0) && (self.passwordTextfield && self.passwordTextfield.text.length > 0)) {
         
-        [self.view makeToast:@"Login Successful" duration:2.0 position:CSToastPositionCenter];
+        [[NSUserDefaults standardUserDefaults] setObject:self.emailTextfield.text forKey:@"user-email"];
+        [[NSUserDefaults standardUserDefaults] setObject:self.passwordTextfield.text forKey:@"user-password"];
+        
+        [APICalls loginUser:^(NSData * _Nonnull responseData) {
+            
+            NSError * readError;
+            
+            NSDictionary * responseDict = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&readError];
+            
+            NSLog(@"Response: %@", responseDict);
+            
+            if(responseDict[@"value"] != nil) {
+                
+                [[NSUserDefaults standardUserDefaults] setObject:responseDict[@"value"] forKey:@"bearer-token"];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:@"teacher" forKey:@"user-type"];
+                
+                NSString * userType = (NSString *)[[NSUserDefaults standardUserDefaults] valueForKey:@"user-type"];
+                
+                if ([userType isEqualToString:@"teacher"]) {
+                    [self presentTeacherStoryboard];
+                } else if ([userType isEqualToString:@"student"]) {
+                    [self presentStudentStoryboard];
+                } else {
+                    
+                    [APICalls getParty:^(NSData * _Nonnull responseData) {
+                        
+                        NSError * readError;
+                        
+                        NSDictionary * responseDict = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&readError];
+                        
+                        NSLog(@"Response Dictionary for Anonym User is: %@", responseDict);
+                        
+                    }];
+                    
+                    [self.navigationController popToRootViewControllerAnimated:NO];
+                }
+                
+            } else {
+                NSLog(@"Errro : %@", responseDict);
+                #warning HANDLE ERROR HERE - ALERT FOR MVP
+            }
+        }];
+        
+        //[self.view makeToast:@"Login Successful" duration:2.0 position:CSToastPositionCenter];
     }else if (self.emailTextfield.text.length <= 0){
         [self.view makeToast:@"Please enter your email address" duration:2.0 position:CSToastPositionCenter];
     } else {
@@ -111,5 +157,24 @@
     return YES;
 }
 
+
+#pragma mark - Navigation
+
+- (void)presentStudentStoryboard {
+    
+    UIStoryboard * studentBoard = [UIStoryboard storyboardWithName:@"Student" bundle:nil];
+    [self presentViewController:studentBoard.instantiateInitialViewController animated:YES completion:^{
+        [self.navigationController popViewControllerAnimated:NO];
+    }];
+}
+
+
+- (void)presentTeacherStoryboard {
+    
+    UIStoryboard * teacherBoard = [UIStoryboard storyboardWithName:@"Teacher" bundle:nil];
+    [self presentViewController:teacherBoard.instantiateInitialViewController animated:YES completion:^{
+        [self.navigationController popViewControllerAnimated:NO];
+    }];
+}
 
 @end

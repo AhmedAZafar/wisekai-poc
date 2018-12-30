@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UserSelectionViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *teacherButton;
 @property (weak, nonatomic) IBOutlet UIButton *studentButton;
+@property (weak, nonatomic) IBOutlet UIButton *existingAccountButton;
 
 @end
 
