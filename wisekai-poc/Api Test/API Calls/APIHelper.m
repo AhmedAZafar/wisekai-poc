@@ -10,6 +10,11 @@
 
 @implementation APIHelper
 
++ (NSString *)getWisekaiAuthString {
+    
+    return @"Basic QU5PTllNOkFOT05ZTSFAIyQ=";
+}
+
 + (NSString *)getBasicAuthStringFromUserDefaults {
     
     NSString * email = [[NSUserDefaults standardUserDefaults] valueForKey:@"user-email"];
@@ -37,6 +42,16 @@
     sessionConf.allowsCellularAccess = YES;
     
     return sessionConf;
+}
+
++ (NSString *)getBearerTokenFromPersistenceStore {
+    NSString * token = [[NSUserDefaults standardUserDefaults] valueForKey:@"bearer-token"];
+    
+    if (token.length > 0) {
+        NSLog(@"Bearer Token Found: %@", token);
+    }
+    
+    return [NSString stringWithFormat:@"Bearer %@", token];
 }
 
 @end

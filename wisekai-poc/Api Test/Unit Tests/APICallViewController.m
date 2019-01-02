@@ -22,8 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    studentBearerToken = @"935cac27-dd0d-4f22-8c24-8361f3e2a70a";
-    teacherBearerToken = @"70d5a563-9f44-47a6-add3-6573299ca00b";
+    studentBearerToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"bearer-token"];
+    teacherBearerToken = @"437f3f17-bc93-42d0-ba0d-4b82ce561df9";
 }
 
 - (IBAction)createStudent:(id)sender {
@@ -212,6 +212,8 @@
     //Set up your request
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://wisekai.com:8085/api/v1/lesson/"]];
     
+    //NSString * tempToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"bearer-token"];
+    
     // Set your user login credentials
     [request setValue:[NSString stringWithFormat:@"Bearer %@", teacherBearerToken] forHTTPHeaderField:@"Authorization"];
     
@@ -333,7 +335,7 @@
     //if (self.slotTextfield.text.length > 0) {
         
         //Set up your request
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://wisekai.com:8085/api/v1/lesson/slots/9/"]]];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://wisekai.com:8085/api/v1/lesson/slots/38/"]]];
         
         // Set your user login credentials
         [request setValue:[NSString stringWithFormat:@"Bearer %@", studentBearerToken] forHTTPHeaderField:@"Authorization"];
@@ -368,16 +370,15 @@
     
     [request setHTTPMethod:@"POST"];
     
-    NSArray
-    * reqBody = @[@{
-                               @"date" : @"2019-02-21T22:26:30.108+0000",
-                               @"durationInMinutes" : @80,
-                               @"endTime_minuteOfDay" : @170,
-                               @"lessonId" : @9,
-                               @"numSubscribers" : @7,
-                               @"scheduleId" : @10,
+    NSArray * reqBody = @[@{
+                               @"date" : @"2019-01-24T20:49:42.299+0000",
+                               @"durationInMinutes" : @106,
+                               @"endTime_minuteOfDay" : @196,
+                               @"lessonId" : @38,
+                               @"numSubscribers" : @1,
+                               @"scheduleId" : @39,
                                @"startTime_minuteOfDay" : @90,
-                               @"vacancy" : @20
+                               @"vacancy" : @7
                                }];
     
     NSError * jsonError;

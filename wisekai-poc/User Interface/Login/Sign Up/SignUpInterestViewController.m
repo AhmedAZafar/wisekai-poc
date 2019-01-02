@@ -8,6 +8,8 @@
 
 #import "SignUpInterestViewController.h"
 #import "UIColor+Wisekai.h"
+#import <Toast/Toast.h>
+#import "APICalls.h"
 
 @interface SignUpInterestViewController ()
 
@@ -93,6 +95,75 @@
 #pragma mark - IBActions
 
 - (IBAction)didSelectSignUp:(id)sender {
+    
+    if ([self validateTextfields]) {
+        [self updatePersistenceStore];
+        
+        [APICalls createStudent:^void (NSData * _Nonnull responseData) {
+            
+            NSError * readError;
+            
+            NSDictionary * responseDict = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&readError];
+            
+            NSLog(@"Response: %@", responseDict);
+            
+            if ([responseDict objectForKey:@"value"] != nil) {
+                
+                
+                [[NSUserDefaults standardUserDefaults] setObject:responseDict[@"value"] forKey:@"bearer-token"];
+                
+                [self performSegueWithIdentifier:@"studenthome" sender:nil];
+                
+            } else {
+                [self.view makeToast:@"Server failed to process request. Please try again later or contact system admin" duration:2.5 position:CSToastPositionCenter];
+            }
+            
+        }];
+        
+        
+    }
+    
+
+}
+
+#pragma mark - UITextfield Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark - Textfield Validator
+
+- (BOOL)validateTextfields {
+    
+    if ((self.primaryInterestTextfield.text.length > 0) &&
+        (self.secondaryInterestTextfield.text.length > 0) &&
+        (self.tertiaryInterestTextfield.text.length > 0)){
+        
+        return true;
+        
+    } else {
+        
+        return false;
+    }
+    
+}
+
+
+#pragma mark - Persistence Store
+
+- (void)updatePersistenceStore {
+    
+    NSDictionary * lesson = @{
+                              
+                              @"user-interest-one":self.primaryInterestTextfield.text,
+                              @"user-interest-two":self.secondaryInterestTextfield.text,
+                              @"user-interest-three":self.tertiaryInterestTextfield.text
+                              
+                              };
+    
+    [[NSUserDefaults standardUserDefaults] setObject:lesson forKey:@"user-interests"];
 }
 
 

@@ -8,6 +8,7 @@ target 'wisekai-poc' do
   pod 'Toast', '~> 4.0.0'
   pod 'FSCalendar'
   pod 'XLForm', '~> 4.0'
+  pod "DownPicker"
   # Pods for wisekai-poc
 
   target 'wisekai-pocTests' do

@@ -26,7 +26,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    
+    /*
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     
     NSString * userType = [userDefaults valueForKey:@"user-type"];
@@ -60,11 +60,11 @@
     } else {
         
         [self presentUserSelection];
-    }
+    }*/
     
-    //UIStoryboard * devBoard = [UIStoryboard storyboardWithName:@"APITest" bundle:nil];
+    UIStoryboard * devBoard = [UIStoryboard storyboardWithName:@"APITest" bundle:nil];
     //UIStoryboard * devBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    //rself.window.rootViewController = devBoard.instantiateInitialViewController;
+    self.window.rootViewController = devBoard.instantiateInitialViewController;
     
     //[self presentTeacherStoryboard];
     

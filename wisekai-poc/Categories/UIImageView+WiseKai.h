@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIImageView *)getNavBarImageViewForIcon:(NSString *)imageName;
 
++ (UIImageView *)getTeacherToolbarImageViewForIcon:(NSString *)imageName;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TeacherViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *teacherTableView;
 @property (weak, nonatomic) IBOutlet UIToolbar *teacherToolbar;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
+
+@property (strong, nonatomic) NSArray * lessonListArray;
 
 @end
 

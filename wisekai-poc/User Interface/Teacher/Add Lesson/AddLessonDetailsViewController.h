@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <XLForm/XLForm.h>
+//#import <CoreLocation/CoreLocation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddLessonDetailsViewController : XLFormViewController
+@interface AddLessonDetailsViewController : UIViewController <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *lessonDayTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *startTimeTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *lessonTagOeTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *lessonTagTwoTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *lessonTagThreeTextfield;
+@property (weak, nonatomic) IBOutlet UILabel *lessonLocationLabel;
+@property (weak, nonatomic) IBOutlet UIButton *createLessonButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 
 @end
 

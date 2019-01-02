@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSURLSession *)getWisekaiDefaultSession;
 
++ (NSString *)getBearerTokenFromPersistenceStore;
+
++ (NSString *)getWisekaiAuthString;
+
 @end
 
 NS_ASSUME_NONNULL_END

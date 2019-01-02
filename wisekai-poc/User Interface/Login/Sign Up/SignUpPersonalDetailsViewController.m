@@ -9,12 +9,13 @@
 #import "SignUpPersonalDetailsViewController.h"
 #import "UIColor+Wisekai.h"
 #import <Toast/Toast.h>
+#import <DownPicker/DownPicker.h>
 
 @interface SignUpPersonalDetailsViewController () {
     UIDatePicker * dobPicker;
-    UIPickerView * genderPicker;
     
     NSArray * genderArray;
+    DownPicker * genderDownPicker;
 }
 
 @end
@@ -96,7 +97,13 @@
 
 - (void)setGenderPicker {
     
-    genderPicker = [[UIPickerView alloc] init];
+    NSMutableArray * genderArray = [[NSMutableArray alloc] init];
+    
+    [genderArray addObject:@"Male"];
+    [genderArray addObject:@"Female"];
+    
+    genderDownPicker = [[DownPicker alloc] initWithTextField:self.genderTextfield withData:genderArray];
+    
     
 }
 
@@ -127,7 +134,7 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMMM dd yyyy"];
-    self.dobTextfield.text = [dateFormatter stringFromDate:dobPicker.date];
+    self.dobTextfield.text = [self getUTCFormateDate:dobPicker.date];
 }
 
 - (void)setTextFieldBorder :(UITextField *)textField{
@@ -140,6 +147,16 @@
     [textField.layer addSublayer:border];
     textField.layer.masksToBounds = YES;
     
+}
+
+-(NSString *)getUTCFormateDate:(NSDate *)localDate
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    [dateFormatter setTimeZone:timeZone];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dateString = [dateFormatter stringFromDate:localDate];
+    return dateString;
 }
 
 #pragma mark - IBActions

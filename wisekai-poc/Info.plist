@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Wisekai would like to access your location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Wisekai would like to access your location</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Wisekai would like to access your photos</string>
 	<key>NSCameraUsageDescription</key>

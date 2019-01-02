@@ -18,4 +18,13 @@
     return imgView;
 }
 
+
++ (UIImageView *)getTeacherToolbarImageViewForIcon:(NSString *)imageName {
+    UIImageView * imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
+    
+    imgView.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+    return imgView;
+}
+
 @end

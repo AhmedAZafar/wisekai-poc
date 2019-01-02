@@ -10,6 +10,7 @@
 #import "UIColor+Wisekai.h"
 
 #import "APICalls.h"
+#import <Toast/Toast.h>
 
 
 @interface SignUpQualificationViewController ()
@@ -106,7 +107,16 @@
         
         NSLog(@"Response: %@", responseDict);
         
-        [[NSUserDefaults standardUserDefaults] setObject:responseDict[@"value"] forKey:@"bearer-token"];
+        if ([responseDict objectForKey:@"value"] != nil) {
+            
+            
+            [[NSUserDefaults standardUserDefaults] setObject:responseDict[@"value"] forKey:@"bearer-token"];
+            
+            [self performSegueWithIdentifier:@"teacherhome" sender:nil];
+            
+        } else {
+            [self.view makeToast:@"Server failed to process request. Please try again later or contact system admin" duration:2.5 position:CSToastPositionCenter];
+        }
     }];
     
     

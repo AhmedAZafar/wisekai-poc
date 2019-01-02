@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField * lessonNameTextfield;
 @property (weak, nonatomic) IBOutlet UITextField * lessonDescriptionTextfield;
 @property (weak, nonatomic) IBOutlet UITextField * lessonObjectiveTextfield;
-@property (weak, nonatomic) IBOutlet UITextField *lessonTagsTextfield;
 @property (weak, nonatomic) IBOutlet UISlider * classSizeSlider;
 @property (weak, nonatomic) IBOutlet UISlider * classDurationSlider;
 @property (weak, nonatomic) IBOutlet UILabel *classSizeLabel;
@@ -23,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UISlider *priceSlider;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIScrollView *addLessonScrollView;
+@property (weak, nonatomic) IBOutlet UIView *addLessonContentView;
 
 @end
 

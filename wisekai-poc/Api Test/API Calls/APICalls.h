@@ -12,12 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface APICalls : NSObject
 
-+ (void)createStudent;
++ (void)createStudent:(void (^)(NSData * responseData))completion;
 + (void)createTeacher:(void (^)(NSData * responseData))completion;
 + (void)loginUser:(void (^)(NSData * responseData))completion;
 + (void)getParty:(void (^)(NSData * responseData))completion;
 + (void)getLessons:(void (^)(NSData * responseData))completion;
 + (void)createLesson:(void (^)(NSData * responseData))completion;
++ (void)getNotifications:(void (^)(NSData * responseData))completion;
 + (void)updateStudent;
 + (void)updateTeacher;
 

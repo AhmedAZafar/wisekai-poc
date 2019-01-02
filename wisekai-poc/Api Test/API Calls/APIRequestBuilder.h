@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSMutableURLRequest *)getCreateTeacherRequest;
 
++ (NSMutableURLRequest *)getCreateStudentRequest;
+
 + (NSMutableURLRequest *)getLoginRequest;
 
 + (NSMutableURLRequest *)getPartyRequest;
@@ -21,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSMutableURLRequest *)getLessons;
 
 + (NSMutableURLRequest *)createLesson;
+
++ (NSMutableURLRequest *)getNotifications;
 
 
 @end

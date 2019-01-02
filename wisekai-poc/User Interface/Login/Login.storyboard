@@ -408,11 +408,20 @@
                         <outlet property="secondaryInterestTextfield" destination="tRr-6g-59N" id="eEm-MF-1XP"/>
                         <outlet property="signUpButton" destination="Mgr-bb-MbJ" id="Gld-48-bRW"/>
                         <outlet property="tertiaryInterestTextfield" destination="FGf-Hq-ArR" id="wRe-Ks-Kb9"/>
+                        <segue destination="Grk-4n-gvM" kind="show" identifier="studenthome" id="E4j-iG-eOF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njc-Pi-7ky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3213.5999999999999" y="205.54722638680661"/>
+        </scene>
+        <!--Student-->
+        <scene sceneID="xlG-Hy-Vax">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Student" id="Grk-4n-gvM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXS-xg-gAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3918" y="218"/>
         </scene>
         <!--Sign Up Qualification View Controller-->
         <scene sceneID="Og4-l9-jAh">
@@ -495,11 +504,20 @@
                         <outlet property="secondaryQualificationTextfield" destination="idh-CM-N3B" id="w0b-6o-Zjt"/>
                         <outlet property="signUpButton" destination="aDY-vk-GMr" id="kJR-O0-EhE"/>
                         <outlet property="tertiaryQualificationTextfield" destination="PWJ-QE-Coz" id="Nlq-pm-HG2"/>
+                        <segue destination="jBZ-v2-6Br" kind="show" identifier="teacherhome" id="rQk-hR-nAz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2q-cC-dqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3213.5999999999999" y="875.71214392803608"/>
+        </scene>
+        <!--Teacher-->
+        <scene sceneID="K5h-fO-Acp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Teacher" id="jBZ-v2-6Br" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCB-JY-SDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3897" y="783"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="OVY-tx-xbv">

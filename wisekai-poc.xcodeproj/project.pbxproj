@@ -34,6 +34,9 @@
 		E2AD724921C9DF1F003AF9E3 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724821C9DF1F003AF9E3 /* SignUpViewController.m */; };
 		E2AD724D21C9E9E2003AF9E3 /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */; };
 		E2AD725521CAE2B6003AF9E3 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AD725421CAE2B6003AF9E3 /* Map.storyboard */; };
+		E2C1881C21DA6014004F54B8 /* AddLessonLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C1881B21DA6014004F54B8 /* AddLessonLocationViewController.m */; };
+		E2C1881F21DCDF3D004F54B8 /* TeacherAlertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C1881E21DCDF3D004F54B8 /* TeacherAlertsViewController.m */; };
+		E2C1882221DCE954004F54B8 /* TeacherProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C1882121DCE954004F54B8 /* TeacherProfileViewController.m */; };
 		E2CE32B721D64DAB00164445 /* APICalls.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CE32B621D64DAB00164445 /* APICalls.m */; };
 		E2CE32B921D64E2700164445 /* APITest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE32B821D64E2700164445 /* APITest.storyboard */; };
 		E2CE32BC21D64E4900164445 /* APICallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CE32BB21D64E4900164445 /* APICallViewController.m */; };
@@ -113,6 +116,12 @@
 		E2AD724B21C9E9E2003AF9E3 /* LessonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessonViewController.h; sourceTree = "<group>"; };
 		E2AD724C21C9E9E2003AF9E3 /* LessonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LessonViewController.m; sourceTree = "<group>"; };
 		E2AD725421CAE2B6003AF9E3 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		E2C1881A21DA6014004F54B8 /* AddLessonLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddLessonLocationViewController.h; sourceTree = "<group>"; };
+		E2C1881B21DA6014004F54B8 /* AddLessonLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddLessonLocationViewController.m; sourceTree = "<group>"; };
+		E2C1881D21DCDF3D004F54B8 /* TeacherAlertsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeacherAlertsViewController.h; sourceTree = "<group>"; };
+		E2C1881E21DCDF3D004F54B8 /* TeacherAlertsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeacherAlertsViewController.m; sourceTree = "<group>"; };
+		E2C1882021DCE954004F54B8 /* TeacherProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeacherProfileViewController.h; sourceTree = "<group>"; };
+		E2C1882121DCE954004F54B8 /* TeacherProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeacherProfileViewController.m; sourceTree = "<group>"; };
 		E2CE32B521D64DAB00164445 /* APICalls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APICalls.h; sourceTree = "<group>"; };
 		E2CE32B621D64DAB00164445 /* APICalls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APICalls.m; sourceTree = "<group>"; };
 		E2CE32B821D64E2700164445 /* APITest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = APITest.storyboard; sourceTree = "<group>"; };
@@ -295,6 +304,10 @@
 				E2E2976721D0FB1B00A35FD0 /* Teacher.storyboard */,
 				E2E2976921D0FD9000A35FD0 /* TeacherViewController.h */,
 				E2E2976A21D0FD9000A35FD0 /* TeacherViewController.m */,
+				E2C1881D21DCDF3D004F54B8 /* TeacherAlertsViewController.h */,
+				E2C1881E21DCDF3D004F54B8 /* TeacherAlertsViewController.m */,
+				E2C1882021DCE954004F54B8 /* TeacherProfileViewController.h */,
+				E2C1882121DCE954004F54B8 /* TeacherProfileViewController.m */,
 			);
 			path = Teacher;
 			sourceTree = "<group>";
@@ -442,6 +455,8 @@
 				E2E2976E21D107AF00A35FD0 /* AddLessonViewController.m */,
 				E250F08321D8529E00DA8BE7 /* AddLessonDetailsViewController.h */,
 				E250F08421D8529E00DA8BE7 /* AddLessonDetailsViewController.m */,
+				E2C1881A21DA6014004F54B8 /* AddLessonLocationViewController.h */,
+				E2C1881B21DA6014004F54B8 /* AddLessonLocationViewController.m */,
 			);
 			path = "Add Lesson";
 			sourceTree = "<group>";
@@ -565,6 +580,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-wisekai-poc/Pods-wisekai-poc-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/DownPicker/DownPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
@@ -574,6 +590,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DownPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
@@ -630,11 +647,13 @@
 			files = (
 				E2E2976F21D107AF00A35FD0 /* AddLessonViewController.m in Sources */,
 				E2D398FA21BC57F000845B25 /* UIColor+Wisekai.m in Sources */,
+				E2C1881F21DCDF3D004F54B8 /* TeacherAlertsViewController.m in Sources */,
 				E2CE32BF21D71FA400164445 /* SignUpPersonalDetailsViewController.m in Sources */,
 				E2AD724D21C9E9E2003AF9E3 /* LessonViewController.m in Sources */,
 				E2CE32BC21D64E4900164445 /* APICallViewController.m in Sources */,
 				7CA984CD21A5B5F70062F088 /* main.m in Sources */,
 				E2D3991C21C049D500845B25 /* UserSelectionViewController.m in Sources */,
+				E2C1881C21DA6014004F54B8 /* AddLessonLocationViewController.m in Sources */,
 				E2AD722E21C70C0D003AF9E3 /* UIImageView+WiseKai.m in Sources */,
 				E2D3992C21C18FA500845B25 /* User.m in Sources */,
 				7C62059921CAA88900A938F2 /* UserViewController.m in Sources */,
@@ -653,6 +672,7 @@
 				E2AD724921C9DF1F003AF9E3 /* SignUpViewController.m in Sources */,
 				E2E2976B21D0FD9000A35FD0 /* TeacherViewController.m in Sources */,
 				7CA984BF21A5B5F50062F088 /* AppDelegate.m in Sources */,
+				E2C1882221DCE954004F54B8 /* TeacherProfileViewController.m in Sources */,
 				E2CE32C521D7B4D500164445 /* SignUpInterestViewController.m in Sources */,
 				E2AD724121C9D75B003AF9E3 /* LoginViewController.m in Sources */,
 			);
